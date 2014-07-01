@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<style>
+
+.node {
+  stroke: #fff;
+  stroke-width: 1.5px;
+}
+
+.link {
+  stroke: #999;
+  stroke-opacity: .6;
+}
+
+</style>
+<body>
+<script src="http://d3js.org/d3.v3.min.js"></script>
+<script>
+
+var width = 960,
+    height = 500;
+
+var color = d3.scale.category20();
+
+// var force = d3.layout.force()
+//     .charge(-120)
+//     .linkDistance(30)
+//     .size([width, height]);
+
+var force=d3.layout.force()
+    .gravity(0.5)
+    .charge(-250)
+    .linkDistance(function(d) { return 500/(Math.sqrt(d.value)); })
+    .linkStrength(1)
+    .size([width, height]);
+
+var svg = d3.select("body").append("svg")
+    .attr("width", width)
+    .attr("height", height);
+
+d3.json("friends.json", function(error, graph) {
+  var node_hash = [];
+  var type_hash = [];
+  var nodeSet = graph.nodes;
+  var linkSet = graph.links;
+  console.log(nodeSet);
+      // Create a hash that allows access to each node by its id
+      nodeSet.forEach(function(d, i) {
+        node_hash[d.screen_name] = d;
+      });
+      // Append the source object node and the target object node to each link records...
+      linkSet.forEach(function(d, i) {
+        d.source = node_hash[d.source];
+        d.target = node_hash[d.target];
+        });
+  force
+      .nodes(nodeSet)
+      .links(linkSet)
+      .start();
+
+  // console.log(nodes);
+
+  var link = svg.selectAll(".link")
+      .data(graph.links)
+      .enter().append("g")
+      .attr("class", "link")
+      .append("line")
+      .style("stroke-width", function(d) { return 3*(Math.sqrt(d.value)); });
+
+  var node = svg.selectAll(".node")
+      .data(graph.nodes)
+      .enter().append("g")
+      .attr("class", "node")
+      .attr("id",function(d){ return d.name;});
+
+  node.append("circle")
+      .attr("r", 25)
+      .style("fill", function(d) { return color(d.group); })
+      .style("opacity", .5)
+      .call(force.drag);
+
+  node.append("text")
+      .text(function(d) { return d.name; })
+      .style("fill", "black")
+      .style("stroke", "none")
+      .style('font-size',"18px")
+      .style('font-weight',"200")
+      .style('padding', '10px');
+
+  force.on("tick", function() {
+    link.attr("x1", function(d) { return d.source.x; })
+        .attr("y1", function(d) { return d.source.y; })
+        .attr("x2", function(d) { return d.target.x; })
+        .attr("y2", function(d) { return d.target.y; });
+
+    // node.attr("cx", function(d) { return d.x; })
+        // .attr("cy", function(d) { return d.y; });
+      node.attr("transform", function(d) { return "translate(" + d.x + "," + d.y + ")"; });
+  });
+});
+
+</script>
