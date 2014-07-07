@@ -87,38 +87,40 @@ links = []
 #new file for the big json
 # NODES_FILE = 'allAccounts-nodes-followEachOther.js'
 # f_nodes = io.open(NODES_FILE, 'w', encoding='utf8')
-LINKS_FILE = 'allAccounts-links-followEachOther.js'
-f_links = io.open(LINKS_FILE, 'w', encoding='utf8')
+# LINKS_FILE = 'allAccounts-links-followEachOther.js'
+# f_links = io.open(LINKS_FILE, 'w', encoding='utf8')
 # PAIRS_FILE = 'allAccounts-pairs-followEachOther.js'
 # f_pairs = io.open(PAIRS_FILE, 'w', encoding='utf8')
+CYTO_FILE = 'cyto-followEachOther.csv'
+f_cyto = io.open(CYTO_FILE, 'w', encoding='utf8')
 
 # auth
-t = Twitter(auth=OAuth(OAUTH_TOKEN, OAUTH_SECRET, CONSUMER_KEY, CONSUMER_SECRET))
+# t = Twitter(auth=OAuth(OAUTH_TOKEN, OAUTH_SECRET, CONSUMER_KEY, CONSUMER_SECRET))
 
-def getRate(type): #gives you the number of seconds to delay these calls by
-    rate_response = t.application.rate_limit_status()['resources']
-    # print rate_response
-    if type == "USER_SHOW_THROTTLE":
-        remaining = rate_response['users']['/users/show/:id']
-        reset_time = remaining['reset'] - int(time.time())
-        return reset_time if remaining['remaining'] == 0 else reset_time/remaining['remaining']
-    elif type == "FOLLOWER_THROTTLE":
-        remaining = rate_response['followers']['/followers/ids']
-        reset_time = remaining['reset'] - int(time.time())
-        return reset_time if remaining['remaining'] == 0 else reset_time/remaining['remaining']
-    elif type == "FOLLOWING_THROTTLE":
-        remaining = rate_response['followers']['/followers/ids']
-        reset_time = remaining['reset'] - int(time.time())
-        return reset_time if remaining['remaining'] == 0 else reset_time/remaining['remaining']
-    elif type == "MUTUAL_THROTTLE":
-        remaining = rate_response['friendships']['/friendships/show']
-        reset_time = remaining['reset'] - int(time.time())
-        return reset_time if remaining['remaining'] == 0 else reset_time/remaining['remaining']
+# def getRate(type): #gives you the number of seconds to delay these calls by
+#     rate_response = t.application.rate_limit_status()['resources']
+#     # print rate_response
+#     if type == "USER_SHOW_THROTTLE":
+#         remaining = rate_response['users']['/users/show/:id']
+#         reset_time = remaining['reset'] - int(time.time())
+#         return reset_time if remaining['remaining'] == 0 else reset_time/remaining['remaining']
+#     elif type == "FOLLOWER_THROTTLE":
+#         remaining = rate_response['followers']['/followers/ids']
+#         reset_time = remaining['reset'] - int(time.time())
+#         return reset_time if remaining['remaining'] == 0 else reset_time/remaining['remaining']
+#     elif type == "FOLLOWING_THROTTLE":
+#         remaining = rate_response['followers']['/followers/ids']
+#         reset_time = remaining['reset'] - int(time.time())
+#         return reset_time if remaining['remaining'] == 0 else reset_time/remaining['remaining']
+#     elif type == "MUTUAL_THROTTLE":
+#         remaining = rate_response['friendships']['/friendships/show']
+#         reset_time = remaining['reset'] - int(time.time())
+#         return reset_time if remaining['remaining'] == 0 else reset_time/remaining['remaining']
 
-def throttle(type):
-    rate = getRate(type) + .25
-    print "sleeping for %s sec" % (rate)
-    time.sleep(rate) #throttle
+# def throttle(type):
+#     rate = getRate(type) + .25
+#     print "sleeping for %s sec" % (rate)
+#     time.sleep(rate) #throttle
 
 # class Node:
 
@@ -160,33 +162,52 @@ class Link:
 # 		# 	link = Link(target.screen_name, source.screen_name)
 # 		# 	links.append(link)
 
-f = open('_allAccounts-pairs-followEachOther.js')
-lines = f.readlines()
-f.close()
+# f = open('_allAccounts-pairs-followEachOther.js')
+# lines = f.readlines()
+# f.close()
 
 # print lines
+
+# for line in lines:
+# 	line = line.rstrip('\n')
+# 	data = line.split(',')
+# 	source = data[0]
+# 	target = data[1]
+# 	print "%s %s" % (source, target)
+# 	throttle("MUTUAL_THROTTLE")
+# 	data = t.friendships.show(source_screen_name=source, target_screen_name=target)
+# 	following = data["relationship"]["source"]["following"]
+# 	followed_by = data["relationship"]["source"]["followed_by"]
+# 	print following
+# 	print followed_by
+# 	f_links.write(unicode(source + "," + target + "," + str(following) + "," + str(followed_by) + '\n'))
+# 	# if following:
+# 	# 	# link = Link(source, target)
+# 	# 	# links.append(link)
+# 	# if followed_by:
+# 	# 	# link = Link(target.screen_name, source.screen_name)
+# 	# 	# links.append(link)
+
+
+f = open('followEachOther_all.csv')
+lines = f.readlines()
+f.close()
 
 for line in lines:
 	line = line.rstrip('\n')
 	data = line.split(',')
 	source = data[0]
 	target = data[1]
-	print "%s %s" % (source, target)
-	throttle("MUTUAL_THROTTLE")
-	data = t.friendships.show(source_screen_name=source, target_screen_name=target)
-	following = data["relationship"]["source"]["following"]
-	followed_by = data["relationship"]["source"]["followed_by"]
-	print following
-	print followed_by
-	f_links.write(unicode(source + "," + target + "," + str(following) + "," + str(followed_by) + '\n'))
-	# if following:
-	# 	# link = Link(source, target)
-	# 	# links.append(link)
-	# if followed_by:
-	# 	# link = Link(target.screen_name, source.screen_name)
-	# 	# links.append(link)
-
-
+	following = data[2]
+	followed_by = data[3]
+	if following:
+		# link = Link(source, target)
+		# links.append(link)
+		f_cyto.write(unicode(source + "," + target + '\n'))
+	if followed_by:
+		# link = Link(target, source)
+		# links.append(link)
+		f_cyto.write(unicode(target + "," + source + '\n'))
 
 # def encode_link(link):
 #     if isinstance(link, Link):

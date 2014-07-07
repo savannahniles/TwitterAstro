@@ -38,7 +38,8 @@ var svg = d3.select("body").append("svg")
     .attr("width", width)
     .attr("height", height);
 
-d3.json("friends.json", function(error, graph) {
+// d3.json("friends.json", function(error, graph) {
+d3.json("followEachOther.json", function(error, graph) {
   var node_hash = [];
   var type_hash = [];
   var nodeSet = graph.nodes;
