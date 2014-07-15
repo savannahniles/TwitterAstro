@@ -1,0 +1,1 @@
+account, group, totalTweets, totalRetweetedTweets, totalReplyTweets, totalMediaTweets, totalRetweets, totalFavorites
