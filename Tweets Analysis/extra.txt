@@ -1,0 +1,7 @@
+account, group, totalTweets, totalRetweetedTweets, totalReplyTweets, totalMediaTweets, totalRetweets, totalFavorites
+Astro_Satoshi,JAXA,181,0,80,82,54980,12390
+Astro_Wakata,JAXA,200,0,2,157,158413,161869
+Astro_Soichi,JAXA,200,0,7,78,106333,11308
+Astro_Kimiya,JAXA,200,0,3,27,7340,10813
+JAXA_en,JAXA,200,0,2,1,1819,883
+Aki_Hoshide,JAXA,200,0,5,129,40102,438

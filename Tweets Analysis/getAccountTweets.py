@@ -3,10 +3,12 @@ import io
 import time
 from twitter import *
 
-ESA = ["astro_Jfrancois", "astro_timpeake", "Thom_astro", "Astro_Alex", "AstroSamantha", "astro_luca", "astro_andre", "astro_paolo", "Astro_Andreas", "CFuglesang", "ESA_EAC", "esa", "esaoperations"]
-JAXA = ["Astro_Satoshi", "Astro_Wakata", "Astro_Soichi", "Astro_Kimiya", "JAXA_en"]
-CSA = ["csa_asc", "asc_csa", "Astro_Jeremy", "Astro_DavidS", "AstroDaveMD", "Cmdr_Hadfield", "RobertaBondar", "RobertThirsk", "AstroGarneau"]
-Roscosmos = ["fka_roscosmos", "spacetihon", "OlegMKS", "Msuraev", "AntonAstrey"]
+
+# JAXA = ["Aki_Hoshide"]
+# ESA = ["astro_Jfrancois", "astro_timpeake", "Thom_astro", "Astro_Alex", "AstroSamantha", "astro_luca", "astro_andre", "astro_paolo", "Astro_Andreas", "CFuglesang", "ESA_EAC", "esa", "esaoperations"]
+JAXA = ["Astro_Satoshi", "Astro_Wakata", "Astro_Soichi", "Astro_Kimiya", "JAXA_en", "Aki_Hoshide"]
+# CSA = ["csa_asc", "asc_csa", "Astro_Jeremy", "Astro_DavidS", "AstroDaveMD", "Cmdr_Hadfield", "RobertaBondar", "RobertThirsk", "AstroGarneau"]
+# Roscosmos = ["fka_roscosmos", "spacetihon", "OlegMKS", "Msuraev", "AntonAstrey"]
 NASA = [
 "NASA",
 "NASA_Astronauts",
@@ -65,7 +67,8 @@ NASA = [
 "NASA_SLS"
 ]
 
-groups = ["ESA", "JAXA", "CSA", "Roscosmos", "NASA"]
+# groups = ["ESA", "JAXA", "CSA", "Roscosmos", "NASA"]
+groups = ["JAXA"]
 def getGroup(group_name):
     if group_name == "ESA": return ESA 
     if group_name == "JAXA": return JAXA 
@@ -111,15 +114,15 @@ def throttle(type):
     time.sleep(rate) #throttle
 
 #read in all the accounts
-f = open('accounts.txt')
-lines = f.readlines()
-f.close()
+# f = open('accounts.txt')
+# lines = f.readlines()
+# f.close()
 #tf.write(unicode(jsonData))
 
 # Result from this analysis with just first 200 tweets:
 
 # file 1: name_tweets_summary
-SUMMARY_FILE = "accounts_tweets.txt"
+SUMMARY_FILE = "extra.txt"
 f_summary = io.open(SUMMARY_FILE, 'w', encoding='utf8')
 f_summary.write(unicode("account, group, totalTweets, totalRetweetedTweets, totalReplyTweets, totalMediaTweets, totalRetweets, totalFavorites\n"))
 
