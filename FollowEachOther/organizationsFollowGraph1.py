@@ -124,10 +124,10 @@ def incrementValue(s, t):
 
 for source in groups:
 	for target in groups:
-		if source != target:
+		# if source != target:
 			# print "%s %s" % (source, target)
-			link = Link(source, target)
-			links.append(link)
+		link = Link(source, target)
+		links.append(link)
 
 f = open('_allAccounts-links-followEachOther.csv')
 # f = open('test2.csv')
