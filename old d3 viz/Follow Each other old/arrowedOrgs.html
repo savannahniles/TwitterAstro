@@ -1,0 +1,32 @@
+<!doctype html>
+<meta charset="utf-8">
+ 
+<script src="http://www.d3plus.org/js/d3.js"></script>
+<script src="http://www.d3plus.org/js/d3plus.js"></script>
+ 
+<div id="viz"></div>
+ 
+<script>
+ 
+    var nodes =[{"name": "NASA", "accounts": 55}, {"name": "ESA", "accounts": 13}, {"name": "JAXA", "accounts": 6}, {"name": "Roscosmos", "accounts": 5}, {"name": "CSA", "accounts": 9}]
+    var positions =[{"name": "NASA", "x": 33.9, "y": 17.9}, {"name": "ESA", "x": 63.5, "y": 22.4}, {"name": "JAXA", "x": 50.4, "y": 9.4}, {"name": "Roscosmos", "x": 36.9, "y": 36.2}, {"name": "CSA", "x": 55.2, "y": 38.9}]
+    var connections =[{"source": "ESA", "target": "JAXA", "value": 35}, {"source": "ESA", "target": "CSA", "value": 36}, {"source": "ESA", "target": "Roscosmos", "value": 25}, {"source": "ESA", "target": "NASA", "value": 268}, {"source": "JAXA", "target": "ESA", "value": 20}, {"source": "JAXA", "target": "CSA", "value": 9}, {"source": "JAXA", "target": "Roscosmos", "value": 2}, {"source": "JAXA", "target": "NASA", "value": 74}, {"source": "CSA", "target": "ESA", "value": 32}, {"source": "CSA", "target": "JAXA", "value": 6}, {"source": "CSA", "target": "Roscosmos", "value": 5}, {"source": "CSA", "target": "NASA", "value": 97}, {"source": "Roscosmos", "target": "ESA", "value": 16}, {"source": "Roscosmos", "target": "JAXA", "value": 3}, {"source": "Roscosmos", "target": "CSA", "value": 1}, {"source": "Roscosmos", "target": "NASA", "value": 23}, {"source": "NASA", "target": "ESA", "value": 172}, {"source": "NASA", "target": "JAXA", "value": 77}, {"source": "NASA", "target": "CSA", "value": 85}, {"source": "NASA", "target": "Roscosmos", "value": 36}]
+
+  var visualization = d3plus.viz()
+    .container("#viz")
+    .type("network")
+    .data(nodes)
+    .nodes(positions)
+    .edges(connections)
+    .edges({
+        "arrows": true,
+        "label": "value",
+        "size": "value",
+        "id": "target",
+        "value": connections
+    })
+    .size("accounts")
+    .id("name")
+    .draw()
+ 
+</script>
