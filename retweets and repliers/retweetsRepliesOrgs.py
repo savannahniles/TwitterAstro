@@ -105,19 +105,37 @@ class Link:
 
 links = []
 
+def getTarget(target, sourceGroup):
+	targetGroup = getGroup(target)
+	if targetGroup:
+		print "target group:" + targetGroup
+		print "increment value for " + targetGroup
+		incrementValue(sourceGroup, targetGroup)
+
 def findLinks(sourceGroup, source, lines, type):
 	# sourceGroup = getGroup(source)
 	print "*"
 	print "Inside find links for " + type
 	print "Looking at " + source
-	for line in lines:
-		target = line.rstrip('\n')
-		print "target:" + target
-		targetGroup = getGroup(target)
-		if targetGroup:
-			print "target group:" + targetGroup
-			print "increment value for " + targetGroup
-			incrementValue(sourceGroup, targetGroup)
+	if type is "retweets":
+		print "retweets"
+		for line in lines:
+			print "line: " + line
+			line = line.rstrip('\n')
+			tweet = line.split(',')
+			data = tweet[0].split(" ")
+			print "data[0]: " + data[0]
+			firstWord = data[0].rstrip(' ')
+			print firstWord
+			if firstWord == '"RT':
+				target = data[1].replace('@', '').replace(':', '').replace(",", '')
+				print "target is " + target
+				getTarget(target, sourceGroup)
+	else:
+		for line in lines:
+			target = line.rstrip('\n')
+			print "target:" + target
+			getTarget(target, sourceGroup)
 
 
 def incrementValue(source, target):
@@ -153,12 +171,12 @@ for group_name in groups:
 	print " "
 	for screen_name in group:
 		print "screen_name: " + screen_name
-		RETWEETS_FILE = screen_name + "_users_retweeted.csv"
-		f = open("../TweetsAnalysis/" + RETWEETS_FILE)
-		retweetsLines = f.readlines()
+		TWEETS_FILE = screen_name + "_tweets.csv"
+		f = open("../TweetsAnalysis/" + TWEETS_FILE)
+		tweetsLines = f.readlines()
 		print f.readlines()
 		f.close()
-		findLinks(group_name, screen_name, retweetsLines, "retweets")
+		findLinks(group_name, screen_name, tweetsLines, "retweets")
 
 		REPLIES_FILE = screen_name + "_users_replied.csv"
 		f = open("../TweetsAnalysis/" + REPLIES_FILE)
@@ -174,6 +192,7 @@ def encode_link(link):
     return link
 
 LINKS_FILE = 'organizationsRepliesAndRetweetsLinks.json'
+# LINKS_FILE = 'organizationsRepliesLinks.json'
 f_links = io.open(LINKS_FILE, 'w', encoding='utf8')
 
 print unicode(json.dumps(links, default=encode_link))
