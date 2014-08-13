@@ -131,6 +131,11 @@ accountName = "Astro_Alex"
 #     	followers.append(x)
 #     cursor = ret["next_cursor"]
 
+# results
+FOLLOWERS_FILE = "followers.json"
+f = io.open(FOLLOWERS_FILE, 'w', encoding='utf8')
+# f.write(unicode(json.dumps(followers)))   
+
 cursor = -1
 followers = []
 
@@ -139,15 +144,12 @@ while cursor != 0:
     response_dictionary = t.followers.ids(screen_name=accountName, next_cursor=cursor)
     print response_dictionary['ids'][0]
     print "Followers length: " + len(followers)
-    followers.append(response_dictionary['ids'])    
+    followers.append(response_dictionary['ids'])
+    for follower in response_dictionary['ids']:
+        f.write(unicode(follower + '\n'))
     cursor = response_dictionary[ 'next_cursor' ]
 
 print "  "
-
-# results
-FOLLOWERS_FILE = "followers.json"
-f = io.open(FOLLOWERS_FILE, 'w', encoding='utf8')
-f.write(unicode(json.dumps(followers)))
 
 no_repeats = list(set(followers))
 print "With repeats removed: " + len(no_repeats)
