@@ -1,6 +1,7 @@
 import json
 import io
 import time
+import itertools
 from twitter import *
 
 
@@ -143,8 +144,8 @@ while cursor != 0:
     throttle("FOLLOWER_THROTTLE")
     response_dictionary = t.followers.ids(screen_name=accountName, next_cursor=cursor)
     print response_dictionary['ids'][0]
-    print "Followers length: " + len(followers)
-    followers.append(response_dictionary['ids'])
+    followers = list(itertools.chain(followers, response_dictionary['ids']))
+    print "Followers length: " + str(len(followers))
     for follower in response_dictionary['ids']:
         f.write(unicode(follower + '\n'))
     cursor = response_dictionary[ 'next_cursor' ]
@@ -152,7 +153,7 @@ while cursor != 0:
 print "  "
 
 no_repeats = list(set(followers))
-print "With repeats removed: " + len(no_repeats)
+print "With repeats removed: " + str(len(no_repeats))
 
 NO_REPEATS_FILE = "noRepeats_followers.json"
 f = io.open(NO_REPEATS_FILE, 'w', encoding='utf8')
