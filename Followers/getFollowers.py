@@ -147,9 +147,9 @@ while cursor != 0:
     followers = list(itertools.chain(followers, response_dictionary['ids']))
     print "Followers length: " + str(len(followers))
     for follower in response_dictionary['ids']:
-        f.write(unicode(follower + '\n'))
+        f.write(unicode(str(follower) + '\n'))
     cursor = response_dictionary[ 'next_cursor' ]
-    f.write(unicode('next_cursor: ' + cursor + '\n'))
+    f.write(unicode('next_cursor: ' + str(cursor) + '\n'))
     
 
 print "  "
