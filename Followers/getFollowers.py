@@ -149,6 +149,8 @@ while cursor != 0:
     for follower in response_dictionary['ids']:
         f.write(unicode(follower + '\n'))
     cursor = response_dictionary[ 'next_cursor' ]
+    f.write(unicode('next_cursor: ' + cursor + '\n'))
+    
 
 print "  "
 
