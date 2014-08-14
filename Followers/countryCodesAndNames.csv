@@ -1,0 +1,240 @@
+Country                                         ,A 2     ,A 3     ,Number    ,   code
+AFGHANISTAN                                     ,AF      ,AFG     ,004       ,· (AFG)
+ALBANIA                                         ,AL      ,ALB     ,008       ,· (AL )
+ALGERIA                                         ,DZ      ,DZA     ,012       ,· (DZ )
+AMERICAN SAMOA                                  ,AS      ,ASM     ,016       ,·  
+ANDORRA                                         ,AD      ,AND     ,020       ,· (AND)
+ANGOLA                                          ,AO      ,AGO     ,024       ,·  
+ANGUILLA                                        ,AI      ,AIA     ,660       ,·  
+ANTARCTICA                                      ,AQ      ,ATA     ,010       ,·  
+ANTIGUA AND BARBUDA                             ,AG      ,ATG     ,028       ,·  
+ARGENTINA                                       ,AR      ,ARG     ,032       ,· (RA )
+ARMENIA                                         ,AM      ,ARM     ,051       ,· (ARM)
+ARUBA                                           ,AW      ,ABW     ,533       ,·  
+AUSTRALIA                                       ,AU      ,AUS     ,036       ,· (AUS)
+AUSTRIA                                         ,AT      ,AUT     ,040       ,· (A  )
+AZERBAIJAN                                      ,AZ      ,AZE     ,031       ,· (AZ )  
+BAHAMAS                                         ,BS      ,BHS     ,044       ,· (BS )
+BAHRAIN                                         ,BH      ,BHR     ,048       ,· (BRN)
+BANGLADESH                                      ,BD      ,BGD     ,050       ,· (BD )
+BARBADOS                                        ,BB      ,BRB     ,052       ,· (BDS)
+BELARUS                                         ,BY      ,BLR     ,112       ,· (BY ) [obsolescent (SU )]
+BELGIUM                                         ,BE      ,BEL     ,056       ,· (B  )
+BELIZE                                          ,BZ      ,BLZ     ,084       ,· (BH )
+BENIN                                           ,BJ      ,BEN     ,204       ,· (DY )
+BERMUDA                                         ,BM      ,BMU     ,060       ,·  
+BHUTAN                                          ,BT      ,BTN     ,064       ,·  
+BOLIVIA                                         ,BO      ,BOL     ,068       ,· (BOL)
+BOSNIA AND HERZEGOWINA                          ,BA      ,BIH     ,070       ,· (BIH)
+BOTSWANA                                        ,BW      ,BWA     ,072       ,· (RB )
+BOUVET ISLAND                                   ,BV      ,BVT     ,074       ,·  
+BRAZIL                                          ,BR      ,BRA     ,076       ,· (BR )
+BRITISH INDIAN OCEAN TERRITORY                  ,IO      ,IOT     ,086       ,·  
+BRUNEI DARUSSALAM                               ,BN      ,BRN     ,096       ,· (BRU)
+BULGARIA                                        ,BG      ,BGR     ,100       ,· (BG )
+BURKINA FASO                                    ,BF      ,BFA     ,854       ,·  
+BURUNDI                                         ,BI      ,BDI     ,108       ,· (RU )
+CAMBODIA                                        ,KH      ,KHM     ,116       ,· (K  )
+CAMEROON                                        ,CM      ,CMR     ,120       ,· (CAM)
+CANADA                                          ,CA      ,CAN     ,124       ,· (CDN)
+CAPE VERDE                                      ,CV      ,CPV     ,132       ,·  
+CAYMAN ISLANDS                                  ,KY      ,CYM     ,136       ,·  
+CENTRAL AFRICAN REPUBLIC                        ,CF      ,CAF     ,140       ,· (RCA)
+CHAD                                            ,TD      ,TCD     ,148       ,· (TCH), (TD )
+CHILE                                           ,CL      ,CHL     ,152       ,· (RCH)
+CHINA                                           ,CN      ,CHN     ,156       ,· (RC )
+CHRISTMAS ISLAND                                ,CX      ,CXR     ,162       ,·  
+COCOS (KEELING) ISLANDS                         ,CC      ,CCK     ,166       ,·  
+COLOMBIA                                        ,CO      ,COL     ,170       ,· (CO )
+COMOROS                                         ,KM      ,COM     ,174       ,·  
+CONGO                                           ,CG      ,COG     ,178       ,·  
+CONGO, THE DEMOCRATIC REPUBLIC OF THE           ,CD      ,COD     ,180       ,· (RCB)
+COOK ISLANDS                                    ,CK      ,COK     ,184       ,·  
+COSTA RICA                                      ,CR      ,CRI     ,188       ,· (CR )
+COTE D'IVOIRE                                   ,CI      ,CIV     ,384       ,· (CI )
+CROATIA (local name: Hrvatska)                  ,HR      ,HRV     ,191       ,· (HR )     
+CUBA                                            ,CU      ,CUB     ,192       ,· (C  )
+CYPRUS                                          ,CY      ,CYP     ,196       ,· (CY )
+CZECH REPUBLIC                                  ,CZ      ,CZE     ,203       ,· (CZ )  
+DENMARK                                         ,DK      ,DNK     ,208       ,· (DK )
+DJIBOUTI                                        ,DJ      ,DJI     ,262       ,·  
+DOMINICA                                        ,DM      ,DMA     ,212       ,· (WD )
+DOMINICAN REPUBLIC                              ,DO      ,DOM     ,214       ,· (DOM)
+EAST TIMOR                                      ,TP      ,TMP     ,626       ,·  
+ECUADOR                                         ,EC      ,ECU     ,218       ,· (EC )
+EGYPT                                           ,EG      ,EGY     ,818       ,· (ET )
+EL SALVADOR                                     ,SV      ,SLV     ,222       ,· (ES )
+EQUATORIAL GUINEA                               ,GQ      ,GNQ     ,226       ,·  
+ERITREA                                         ,ER	ERI  ,   232  ,     ·  
+E,STONIA                                         ,EE      ,EST     ,233       ,· (EST)
+ETHIOPIA                                        ,ET      ,ETH     ,231       ,· (ETH)
+FALKLAND ISLANDS (MALVINAS)                     ,FK      ,FLK     ,238       ,·  
+FAROE ISLANDS                                   ,FO      ,FRO     ,234       ,· (FO )?, (FR )
+FIJI                                            ,FJ      ,FJI     ,242       ,· (FJI)
+FINLAND                                         ,FI      ,FIN     ,246       ,· (FIN)
+FRANCE                                          ,FR      ,FRA     ,250       ,· (F  )
+FRANCE, METROPOLITAN                            ,FX      ,FXX     ,249       ,·    
+FRENCH GUIANA                                   ,GF      ,GUF     ,254       ,·  
+FRENCH POLYNESIA                                ,PF      ,PYF     ,258       ,·  
+FRENCH SOUTHERN TERRITORIES                     ,TF      ,ATF     ,260       ,·  
+GABON                                           ,GA      ,GAB     ,266       ,· (GAB)
+GAMBIA                                          ,GM      ,GMB     ,270       ,· (WAG)
+GEORGIA                                         ,GE      ,GEO     ,268       ,· (GE )
+GERMANY                                         ,DE      ,DEU     ,276       ,· (D  )
+GHANA                                           ,GH      ,GHA     ,288       ,· (GH )
+GIBRALTAR                                       ,GI      ,GIB     ,292       ,· (GBZ)
+GREECE                                          ,GR      ,GRC     ,300       ,· (GR )
+GREENLAND                                       ,GL      ,GRL     ,304       ,·  
+GRENADA                                         ,GD      ,GRD     ,308       ,· (WG )
+GUADELOUPE                                      ,GP      ,GLP     ,312       ,·  
+GUAM                                            ,GU      ,GUM     ,316       ,·  
+GUATEMALA                                       ,GT      ,GTM     ,320       ,· (GCA)
+GUINEA                                          ,GN      ,GIN     ,324       ,· (RG )
+GUINEA-BISSAU                                   ,GW      ,GNB     ,624       ,·  
+GUYANA                                          ,GY      ,GUY     ,328       ,· (GUY)
+HAITI                                           ,HT      ,HTI     ,332       ,· (RH )
+HEARD AND MC DONALD ISLANDS                     ,HM      ,HMD     ,334       ,·  
+HOLY SEE (VATICAN CITY STATE)                   ,VA      ,VAT     ,336       ,· (V  )
+HONDURAS                                        ,HN      ,HND     ,340       ,·  
+HONG KONG                                       ,HK      ,HKG     ,344       ,· (HK )
+HUNGARY                                         ,HU      ,HUN     ,348       ,· (H  )
+ICELAND                                         ,IS      ,ISL     ,352       ,· (IS )
+INDIA                                           ,IN      ,IND     ,356       ,· (IND)
+INDONESIA                                       ,ID      ,IDN     ,360       ,· (RI )
+IRAN (ISLAMIC REPUBLIC OF)                      ,IR      ,IRN     ,364       ,· (IR )
+IRAQ                                            ,IQ      ,IRQ     ,368       ,· (IRQ)
+IRELAND                                         ,IE      ,IRL     ,372       ,· (IRL)
+ISRAEL                                          ,IL      ,ISR     ,376       ,· (IL )
+ITALY                                           ,IT      ,ITA     ,380       ,· (I  )
+JAMAICA                                         ,JM      ,JAM     ,388       ,· (JA )
+JAPAN                                           ,JP      ,JPN     ,392       ,· (J  )
+JORDAN                                          ,JO      ,JOR     ,400       ,· (HKJ)
+KAZAKHSTAN                                      ,KZ      ,KAZ     ,398       ,· (KZ )
+KENYA                                           ,KE      ,KEN     ,404       ,· (EAK)
+KIRIBATI                                        ,KI      ,KIR     ,296       ,·  
+KOREA, DEMOCRATIC PEOPLE'S REPUBLIC OF          ,KP      ,PRK     ,408       ,·  
+KOREA, REPUBLIC OF                              ,KR      ,KOR     ,410       ,· (ROK)
+KUWAIT                                          ,KW      ,KWT     ,414       ,· (KWT)
+KYRGYZSTAN                                      ,KG      ,KGZ     ,417       ,· (KS )
+LAO PEOPLE'S DEMOCRATIC REPUBLIC                ,LA      ,LAO     ,418       ,· (LAO)
+LATVIA                                          ,LV      ,LVA     ,428       ,· (LV )
+LEBANON                                         ,LB      ,LBN     ,422       ,· (RL )
+LESOTHO                                         ,LS      ,LSO     ,426       ,· (LS )
+LIBERIA                                         ,LR      ,LBR     ,430       ,· (LB )
+LIBYAN ARAB JAMAHIRIYA                          ,LY      ,LBY     ,434       ,· (LAR)
+LIECHTENSTEIN                                   ,LI      ,LIE     ,438       ,· (FL )
+LITHUANIA                                       ,LT      ,LTU     ,440       ,· (LT )
+LUXEMBOURG                                      ,LU      ,LUX     ,442       ,· (L  )
+MACAU                                           ,MO      ,MAC     ,446       ,· ?
+MACEDONIA, THE FORMER YUGOSLAV REPUBLIC OF      ,MK      ,MKD     ,807       ,· (MK )
+MADAGASCAR                                      ,MG      ,MDG     ,450       ,· (RM )
+MALAWI                                          ,MW      ,MWI     ,454       ,· (MW )
+MALAYSIA                                        ,MY      ,MYS     ,458       ,· (MAL)
+MALDIVES                                        ,MV      ,MDV     ,462       ,·  
+MALI                                            ,ML      ,MLI     ,466       ,· (RMM)
+MALTA                                           ,MT      ,MLT     ,470       ,· (M  )
+MARSHALL ISLANDS                                ,MH      ,MHL     ,584       ,·  
+MARTINIQUE                                      ,MQ      ,MTQ     ,474       ,·  
+MAURITANIA                                      ,MR      ,MRT     ,478       ,· (RIM)
+MAURITIUS                                       ,MU      ,MUS     ,480       ,· (MS )
+MAYOTTE                                         ,YT      ,MYT     ,175       ,·    
+MEXICO                                          ,MX      ,MEX     ,484       ,· (MEX)
+MICRONESIA, FEDERATED STATES OF                 ,FM      ,FSM     ,583       ,·  
+MOLDOVA, REPUBLIC OF                            ,MD      ,MDA     ,498       ,· (MD )
+MONACO                                          ,MC      ,MCO     ,492       ,· (MC )
+MONGOLIA                                        ,MN      ,MNG     ,496       ,·  
+MONTSERRAT                                      ,MS      ,MSR     ,500       ,·  
+MOROCCO                                         ,MA      ,MAR     ,504       ,· (MA )
+MOZAMBIQUE                                      ,MZ      ,MOZ     ,508       ,· (MOC)
+MYANMAR                                         ,MM      ,MMR     ,104       ,· (BUR)
+NAMIBIA                                         ,NA      ,NAM     ,516       ,· (NAM)
+NAURU                                           ,NR      ,NRU     ,520       ,·  
+NEPAL                                           ,NP      ,NPL     ,524       ,· (NEP)
+NETHERLANDS                                     ,NL      ,NLD     ,528       ,· (NL )
+NETHERLANDS ANTILLES                            ,AN      ,ANT     ,530       ,· (NA )
+NEW CALEDONIA                                   ,NC      ,NCL     ,540       ,·  
+NEW ZEALAND                                     ,NZ      ,NZL     ,554       ,· (NZ )
+NICARAGUA                                       ,NI      ,NIC     ,558       ,· (NIC)
+NIGER                                           ,NE      ,NER     ,562       ,· (RN )
+NIGERIA                                         ,NG      ,NGA     ,566       ,· (WAN)
+NIUE                                            ,NU      ,NIU     ,570       ,·  
+NORFOLK ISLAND                                  ,NF      ,NFK     ,574       ,·  
+NORTHERN MARIANA ISLANDS                        ,MP      ,MNP     ,580       ,·  
+NORWAY                                          ,NO      ,NOR     ,578       ,· (N  )
+OMAN                                            ,OM      ,OMN     ,512       ,· ?
+PAKISTAN                                        ,PK      ,PAK     ,586       ,· (PAK), (PK )
+PALAU                                           ,PW      ,PLW     ,585       ,·  
+PANAMA                                          ,PA      ,PAN     ,591       ,· (PA )
+PAPUA NEW GUINEA                                ,PG      ,PNG     ,598       ,· (PNG)
+PARAGUAY                                        ,PY      ,PRY     ,600       ,· (PY )
+PERU                                            ,PE      ,PER     ,604       ,· (PE )
+PHILIPPINES                                     ,PH      ,PHL     ,608       ,· (RP )
+PITCAIRN                                        ,PN      ,PCN     ,612       ,·  
+POLAND                                          ,PL      ,POL     ,616       ,· (PL )
+PORTUGAL                                        ,PT      ,PRT     ,620       ,· (P  )
+PUERTO RICO                                     ,PR      ,PRI     ,630       ,· ?
+QATAR                                           ,QA      ,QAT     ,634       ,· (QA )
+REUNION                                         ,RE      ,REU     ,638       ,·  
+ROMANIA                                         ,RO      ,ROM     ,642       ,· (RO )
+RUSSIAN FEDERATION                              ,RU      ,RUS     ,643       ,· (RUS)
+RWANDA                                          ,RW      ,RWA     ,646       ,· (RWA)
+SAINT KITTS AND NEVIS                           ,KN      ,KNA     ,659       ,·  
+SAINT LUCIA                                     ,LC      ,LCA     ,662       ,·  
+SAINT VINCENT AND THE GRENADINES                ,VC      ,VCT     ,670       ,·  
+SAMOA                                           ,WS      ,WSM     ,882       ,· (WS )
+SAN MARINO                                      ,SM      ,SMR     ,674       ,· (RSM)
+SAO TOME AND PRINCIPE                           ,ST      ,STP     ,678       ,·  
+SAUDI ARABIA                                    ,SA      ,SAU     ,682       ,· (SA )
+SENEGAL                                         ,SN      ,SEN     ,686       ,· (SN )
+SEYCHELLES                                      ,SC      ,SYC     ,690       ,· (SY )
+SIERRA LEONE                                    ,SL      ,SLE     ,694       ,· (WAL)
+SINGAPORE                                       ,SG      ,SGP     ,702       ,· (SGP)
+SLOVAKIA (Slovak Republic)                      ,SK      ,SVK     ,703       ,· (SK )
+SLOVENIA                                        ,SI      ,SVN     ,705       ,· (SLO)
+SOLOMON ISLANDS                                 ,SB      ,SLB     ,090       ,·  
+SOMALIA                                         ,SO      ,SOM     ,706       ,· (SO )
+SOUTH AFRICA                                    ,ZA      ,ZAF     ,710       ,· (ZA )
+SOUTH GEORGIA AND THE SOUTH SANDWICH ISLANDS    ,GS      ,SGS     ,239       ,·  
+SPAIN                                           ,ES      ,ESP     ,724       ,· (E  )
+SRI LANKA                                       ,LK      ,LKA     ,144       ,· (CL )
+ST. HELENA                                      ,SH      ,SHN     ,654       ,·  
+ST. PIERRE AND MIQUELON                         ,PM      ,SPM     ,666       ,·  
+SUDAN                                           ,SD      ,SDN     ,736       ,· (SUD)
+SURINAME                                        ,SR      ,SUR     ,740       ,· (SME)
+SVALBARD AND JAN MAYEN ISLANDS                  ,SJ      ,SJM     ,744       ,· (SD )
+SWAZILAND                                       ,SZ      ,SWZ     ,748       ,·  
+SWEDEN                                          ,SE      ,SWE     ,752       ,· (S  )
+SWITZERLAND                                     ,CH      ,CHE     ,756       ,· (CH )
+SYRIAN ARAB REPUBLIC                            ,SY      ,SYR     ,760       ,· (SYR)
+TAIWAN, PROVINCE OF CHINA                       ,TW      ,TWN     ,158       ,· (RC )
+TAJIKISTAN                                      ,TJ      ,TJK     ,762       ,· (TJ )
+TANZANIA, UNITED REPUBLIC OF                    ,TZ      ,TZA     ,834       ,· (EAT)
+THAILAND                                        ,TH      ,THA     ,764       ,· (T  )
+TOGO                                            ,TG      ,TGO     ,768       ,· (TG )
+TOKELAU                                         ,TK      ,TKL     ,772       ,·  
+TONGA                                           ,TO      ,TON     ,776       ,·  
+TRINIDAD AND TOBAGO                             ,TT      ,TTO     ,780       ,· (TT )
+TUNISIA                                         ,TN      ,TUN     ,788       ,· (TN )
+TURKEY                                          ,TR      ,TUR     ,792       ,· (TR )
+TURKMENISTAN                                    ,TM      ,TKM     ,795       ,· (TM )
+TURKS AND CAICOS ISLANDS                        ,TC      ,TCA     ,796       ,·  
+TUVALU                                          ,TV      ,TUV     ,798       ,·  
+UGANDA                                          ,UG      ,UGA     ,800       ,· (EAU)
+UKRAINE                                         ,UA      ,UKR     ,804       ,· (UA )
+UNITED ARAB EMIRATES                            ,AE      ,ARE     ,784       ,· (UAE)
+UNITED KINGDOM                                  ,GB      ,GBR     ,826       ,· (GB )
+UNITED STATES                                   ,US      ,USA     ,840       ,· (USA)
+UNITED STATES MINOR OUTLYING ISLANDS            ,UM      ,UMI     ,581       ,·  
+URUGUAY                                         ,UY      ,URY     ,858       ,· (ROU)
+UZBEKISTAN                                      ,UZ      ,UZB     ,860       ,· (UZ )
+VANUATU                                         ,VU      ,VUT     ,548       ,·  
+VENEZUELA                                       ,VE      ,VEN     ,862       ,· (YV )
+VIET NAM                                        ,VN      ,VNM     ,704       ,· (VN )
+VIRGIN ISLANDS (BRITISH)                        ,VG      ,VGB     ,092       ,·  
+VIRGIN ISLANDS (U.S.)                           ,VI      ,VIR     ,850       ,· (BUI)?
+WALLIS AND FUTUNA ISLANDS                       ,WF      ,WLF     ,876       ,·  
+WESTERN SAHARA                                  ,EH      ,ESH     ,732       ,·  
+YEMEN                                           ,YE      ,YEM     ,887       ,· (ADN), (YEM)
+YUGOSLAVIA                                      ,YU      ,YUG     ,891       ,· (YU )
+ZAMBIA                                          ,ZM      ,ZMB     ,894       ,· (RNR)
+ZIMBABWE                                        ,ZW      ,ZWE     ,716       ,· (ZW )
