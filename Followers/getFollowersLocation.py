@@ -115,13 +115,31 @@ def incrementFollowersLocations(cc5, countryName):
     loc = Country(1, cc5, countryName)
     followersLocations.append(loc)   
 
-accountName = "Astro_Alex"
+
+# @Astro_Alex
+# @AstroSamantha
+# @esa
+# @Thom_astro
+# @astro_timpeake
+
+# @Astro_Mike
+# @Cmdr_Hadfield
+# @NASA
+
+# @astrp_luca
+# @astro_andre
+# @Astro_Andreas
+# @astro_Jfrancois
+# @astro_paolo
+# @CFuglesang
+
+accountName = "astro_Jfrancois"
 #array to store results
 followersLocations = []
 
 #look up list of followers
-FOLLOWERS_LOCATION_FILE = accountName + "_followers_location.txt"
-f = io.open(FOLLOWERS_LOCATION_FILE, 'w', encoding='utf8')
+# FOLLOWERS_LOCATION_FILE = accountName + "_followers_location.txt"
+# f = io.open(FOLLOWERS_LOCATION_FILE, 'w', encoding='utf8')
 
 FOLLOWERS_FILE = accountName + "_followers.json"
 f = open(FOLLOWERS_FILE)
