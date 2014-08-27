@@ -113,7 +113,7 @@ def throttle(type):
     print "sleeping for %s sec" % (rate)
     time.sleep(rate) #throttle
 
-accountName = "Astro_Alex"
+accountName = "AstroSamantha"
 # # next_cursor = -1
 # next_cursor = 1476000366015652434
 # data = t.followers.ids(screen_name=accountName, next_cursor=next_cursor)
@@ -133,7 +133,7 @@ accountName = "Astro_Alex"
 #     cursor = ret["next_cursor"]
 
 # results
-FOLLOWERS_FILE = "followers.json"
+FOLLOWERS_FILE = accountName + "_followers.json"
 f = io.open(FOLLOWERS_FILE, 'w', encoding='utf8')
 # f.write(unicode(json.dumps(followers)))   
 
