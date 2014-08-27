@@ -1,0 +1,525 @@
+cityName,cc2,cc3,countryName,cc5
+TZ*,CC*,,,
+Abidjan,CI,CIV,Cote D'Ivoire,afciv
+Accra,GH,GHA,Ghana,afgha
+Addis Ababa,ET,ETH,Ethiopia,afeth
+Algiers,DZ,DZA,Algeria,afdza
+Asmara,ER,,,
+Asmera,ER,,,
+Bamako,ML,MLI,Mali,afmli
+Bangui,CF,CAF,Central African Republic,afcaf
+Banjul,GM,GMB,Gambia,afgmb
+Bissau,GW,GNB,Guinea-Bissau,afgnb
+Blantyre,MW,MWI,Malawi,afmwi
+Brazzaville,CG,COG,Congo,afcog
+Bujumbura,BI,BDI,Burundi,afbdi
+Cairo,EG,EGY,Egypt,afegy
+Casablanca,MA,MAR,Morocco,afmar
+Ceuta,ES,ESP,Spain,euesp
+Conakry,GN,GIN,Guinea,afgin
+Dakar,SN,SEN,Senegal,afsen
+Dar es Salaam,TZ,,,
+Djibouti,DJ,DJI,Djibouti,afdji
+Douala,CM,CMR,Cameroon,afcmr
+El Aaiun,EH,ESH,Western Sahara,afesh
+Freetown,SL,SLE,Sierra Leone,afsle
+Gaborone,BW,BWA,Botswana,afbwa
+Harare,ZW,ZWE,Zimbabwe,afzwe
+Johannesburg,ZA,ZAF,South Africa,afzaf
+Juba,SS,,,
+Kampala,UG,UGA,Uganda,afuga
+Khartoum,SD,SDN,Sudan,afsdn
+Kigali,RW,RWA,Rwanda,afrwa
+Kinshasa,CD,,,
+Lagos,NG,NGA,Nigeria,afnga
+Libreville,GA,GAB,Gabon,afgab
+Lome,TG,TGO,Togo,aftgo
+Luanda,AO,AGO,Angola,afago
+Lubumbashi,CD,,,
+Lusaka,ZM,ZMB,Zambia,afzmb
+Malabo,GQ,GNQ,Equatorial Guinea,afgnq
+Maputo,MZ,MOZ,Mozambique,afmoz
+Maseru,LS,LSO,Lesotho,aflso
+Mbabane,SZ,SWZ,Swaziland,afswz
+Mogadishu,SO,SOM,Somalia,afsom
+Monrovia,LR,LBR,Liberia,aflbr
+Nairobi,KE,KEN,Kenya,afken
+Ndjamena,TD,TCD,Chad,aftcd
+Niamey,NE,NER,Niger,afner
+Nouakchott,MR,MRT,Mauritania,afmrt
+Ouagadougou,BF,BFA,Burkina Faso,afbfa
+Porto-Novo,BJ,BEN,Benin,afben
+Sao Tome,ST,STP,Sao Tome And Principe,afstp
+Timbuktu,ML,MLI,Mali,afmli
+Tripoli,LY,LBY,Libyan Arab Jamahiriya,aflby
+Tunis,TN,TUN,Tunisia,aftun
+Windhoek,NA,NAM,Namibia,afnam
++515248-1763929,US,USA,United States,nausa
++611305-1495401,US,USA,United States,nausa
+Anguilla,AI,AIA,Anguilla,naaia
+Antigua,AG,ATG,Antigua And Barbuda,naatg
+Araguaina,BR,BRA,Brazil,sabra
+Buenos Aires,AR,ARG,Argentina,saarg
+Catamarca,AR,ARG,Argentina,saarg
+ComodRivadavia,AR,ARG,Argentina,saarg
+Cordoba,AR,ARG,Argentina,saarg
+Jujuy,AR,ARG,Argentina,saarg
+La Rioja,AR,ARG,Argentina,saarg
+Mendoza,AR,ARG,Argentina,saarg
+Rio Gallegos,AR,ARG,Argentina,saarg
+Salta,AR,ARG,Argentina,saarg
+San Juan,AR,ARG,Argentina,saarg
+San Luis,AR,ARG,Argentina,saarg
+Tucuman,AR,ARG,Argentina,saarg
+Ushuaia,AR,ARG,Argentina,saarg
+Aruba,AW,ABW,Aruba,naabw
+Asuncion,PY,PRY,Paraguay,sapry
+Atikokan,CA,CAN,Canada,nacan
+Atka,US,USA,United States,nausa
+Bahia,BR,BRA,Brazil,sabra
+Bahia Banderas,MX,MEX,Mexico,namex
+Barbados,BB,BRB,Barbados,nabrb
+Belem,BR,BRA,Brazil,sabra
+Belize,BZ,BLZ,Belize,nablz
+Blanc-Sablon,CA,CAN,Canada,nacan
+Boa Vista,BR,BRA,Brazil,sabra
+Bogota,CO,COL,Colombia,sacol
+Boise,US,USA,United States,nausa
+Buenos Aires,AR,ARG,Argentina,saarg
+Cambridge Bay,CA,CAN,Canada,nacan
+Campo Grande,BR,BRA,Brazil,sabra
+Cancun,MX,MEX,Mexico,namex
+Caracas,VE,VEN,Venezuela,saven
+Catamarca,AR,ARG,Argentina,saarg
+Cayenne,GF,GUF,French Guiana,saguf
+Cayman,KY,CYM,Cayman Islands,nacym
+Chicago,US,USA,United States,nausa
+Chihuahua,MX,MEX,Mexico,namex
+Coral Harbour,US,USA,United States,nausa
+Cordoba,AR,ARG,Argentina,saarg
+Costa Rica,CR,CRI,Costa Rica,nacri
+Creston,CA,CAN,Canada,nacan
+Cuiaba,BR,BRA,Brazil,sabra
+Curacao,CW,,,
+Danmarkshavn,GL,GRL,Greenland,nagrl
+Greenland,GL,GRL,Greenland,nagrl
+Dawson,CA,CAN,Canada,nacan
+Dawson Creek,CA,CAN,Canada,nacan
+Denver,US,USA,United States,nausa
+Detroit,US,USA,United States,nausa
+Dominica,DM,DMA,Dominica,nadma
+Edmonton,CA,CAN,Canada,nacan
+Eirunepe,BR,BRA,Brazil,sabra
+El Salvador,SV,SLV,El Salvador,naslv
+Ensenada,MX,MEX,Mexico,namex
+Fort Wayne,US,USA,United States,nausa
+Fortaleza,BR,BRA,Brazil,sabra
+Glace Bay,CA,CAN,Canada,nacan
+Godthab,GL,GRL,Greenland,nagrl
+Goose Bay,CA,CAN,Canada,nacan
+Grand Turk,TC,TCA,Turks And Caicos Islands,natca
+Grenada,GD,GRD,Grenada,nagrd
+Guadeloupe,GP,GLP,Guadeloupe,ocglp
+Guatemala,GT,GTM,Guatemala,nagtm
+Guayaquil,EC,ECU,Ecuador,saecu
+Guyana,GY,GUY,Guyana,saguy
+Halifax,CA,CAN,Canada,nacan
+Havana,CU,CUB,Cuba,nacub
+Hermosillo,MX,MEX,Mexico,namex
+Indianapolis,US,USA,United States,nausa
+Knox,US,USA,United States,nausa
+Marengo,US,USA,United States,nausa
+Petersburg,US,USA,United States,nausa
+Tell City,US,USA,United States,nausa
+Valparaiso,US,USA,United States,nausa
+Vevay,US,USA,United States,nausa
+Vincennes,US,USA,United States,nausa
+Winamac,US,USA,United States,nausa
+Indianapolis,US,USA,United States,nausa
+Inuvik,CA,CAN,Canada,nacan
+Iqaluit,CA,CAN,Canada,nacan
+Jamaica,JM,JAM,Jamaica,najam
+Jujuy,AR,ARG,Argentina,saarg
+Juneau,US,USA,United States,nausa
+Louisville,US,USA,United States,nausa
+Monticello,US,USA,United States,nausa
+Knox IN,US,USA,United States,nausa
+Kralendijk,BQ,,,
+La Paz,BO,BOL,Bolivia,sabol
+Lima,PE,PER,Peru,saper
+Los Angeles,US,USA,United States,nausa
+Louisville,US,USA,United States,nausa
+Lower Princes,SX,,,
+Maceio,BR,BRA,Brazil,sabra
+Managua,NI,NIC,Nicaragua,nanic
+Manaus,BR,BRA,Brazil,sabra
+Marigot,MF,,,
+Martinique,MQ,MTQ,Martinique,namtq
+Matamoros,MX,MEX,Mexico,namex
+Mazatlan,MX,MEX,Mexico,namex
+Mendoza,AR,ARG,Argentina,saarg
+Menominee,US,USA,United States,nausa
+Merida,MX,MEX,Mexico,namex
+Metlakatla,US,USA,United States,nausa
+Mexico City,MX,MEX,Mexico,namex
+Miquelon,PM,SPM,St. Pierre And Miquelon,naspm
+Moncton,CA,CAN,Canada,nacan
+Monterrey,MX,MEX,Mexico,namex
+Montevideo,UY,URY,Uruguay,saury
+Montreal,CA,CAN,Canada,nacan
+Montserrat,MS,MSR,Montserrat,namsr
+Nassau,BS,BHS,Bahamas,nabhs
+New York,US,USA,United States,nausa
+Nipigon,CA,CAN,Canada,nacan
+Nome,US,USA,United States,nausa
+Noronha,BR,BRA,Brazil,sabra
+Beulah,US,USA,United States,nausa
+Center,US,USA,United States,nausa
+New Salem,US,USA,United States,nausa
+Ojinaga,MX,MEX,Mexico,namex
+Panama,PA,PAN,Panama,napan
+Pangnirtung,CA,CAN,Canada,nacan
+Paramaribo,SR,SUR,Suriname,sasur
+Phoenix,US,USA,United States,nausa
+Port of Spain,TT,TTO,Trinidad And Tobago,natto
+Port-au-Prince,HT,HTI,Haiti,nahti
+Porto Acre,BR,BRA,Brazil,sabra
+Porto Velho,BR,BRA,Brazil,sabra
+Puerto Rico,PR,PRI,Puerto Rico,napri
+Rainy River,CA,CAN,Canada,nacan
+Rankin Inlet,CA,CAN,Canada,nacan
+Recife,BR,BRA,Brazil,sabra
+Regina,CA,CAN,Canada,nacan
+Resolute,CA,CAN,Canada,nacan
+Rio Branco,BR,BRA,Brazil,sabra
+Rosario,AR,ARG,Argentina,saarg
+Santa Isabel,MX,MEX,Mexico,namex
+Santarem,BR,BRA,Brazil,sabra
+Santiago,CL,CHL,Chile,sachl
+Santo Domingo,DO,DOM,Dominican Republic,nadom
+Sao Paulo,BR,BRA,Brazil,sabra
+Scoresbysund,GL,GRL,Greenland,nagrl
+Shiprock,US,USA,United States,nausa
+Sitka,US,USA,United States,nausa
+St Barthelemy,BL,,,
+St Johns,CA,CAN,Canada,nacan
+St Kitts,KN,KNA,Saint Kitts And Nevis,nakna
+St Lucia,LC,LCA,Saint Lucia,nalca
+St Thomas,VI,VIR,Virgin Islands (U.S.),navir
+St Vincent,VC,VCT,Saint Vincent And The Grenadines,navct
+Swift Current,CA,CAN,Canada,nacan
+Tegucigalpa,HN,HND,Honduras,nahnd
+Thule,GL,GRL,Greenland,nagrl
+Thunder Bay,CA,CAN,Canada,nacan
+Tijuana,MX,MEX,Mexico,namex
+Toronto,CA,CAN,Canada,nacan
+Tortola,VG,VGB,Virgin Islands (British),navgb
+Vancouver,CA,CAN,Canada,nacan
+Virgin,US,USA,United States,nausa
+Whitehorse,CA,CAN,Canada,nacan
+Winnipeg,CA,CAN,Canada,nacan
+Yakutat,US,USA,United States,nausa
+Yellowknife,CA,CAN,Canada,nacan
+Casey,AQ,ATA,Antarctica,anata
+Davis,AQ,ATA,Antarctica,anata
+DumontDUrville,AQ,ATA,Antarctica,anata
+Macquarie,AQ,ATA,Antarctica,anata
+Mawson,AQ,ATA,Antarctica,anata
+McMurdo,AQ,ATA,Antarctica,anata
+Palmer,AQ,ATA,Antarctica,anata
+Rothera,AQ,ATA,Antarctica,anata
+South Pole,AQ,ATA,Antarctica,anata
+Syowa,AQ,ATA,Antarctica,anata
+Troll,AQ,ATA,Antarctica,anata
+Vostok,AQ,ATA,Antarctica,anata
+Longyearbyen,SJ,SJM,Svalbard And Jan Mayen Islands,eusjm
+Aden,YE,YEM,Yemen,asyem
+Almaty,KZ,KAZ,Kazakhstan,askaz
+Amman,JO,JOR,Jordan,asjor
+Anadyr,RU,RUS,Russian Federation,asrus
+Aqtau,KZ,KAZ,Kazakhstan,askaz
+Aqtobe,KZ,KAZ,Kazakhstan,askaz
+Ashgabat,TM,TKM,Turkmenistan,astkm
+Ashkhabad,TM,TKM,Turkmenistan,astkm
+Baghdad,IQ,IRQ,Iraq,asirq
+Bahrain,BH,BHR,Bahrain,asbhr
+Baku,AZ,AZE,Azerbaijan,asaze
+Bangkok,TH,THA,Thailand,astha
+Beirut,LB,LBN,Lebanon,aslbn
+Bishkek,KG,KGZ,Kyrgyzstan,askgz
+Brunei,BN,BRN,Brunei Darussalam,asbrn
+Calcutta,IN,IND,India,asind
+Choibalsan,MN,MNG,Mongolia,asmng
+Chongqing,CN,CHN,China,aschn
+Chungking,CN,CHN,China,aschn
+Colombo,LK,LKA,Sri Lanka,aslka
+Dacca,BD,BGD,Bangladesh,asbgd
+Damascus,SY,SYR,Syrian Arab Republic,assyr
+Dhaka,BD,BGD,Bangladesh,asbgd
+Dili,TL,,,
+Dubai,AE,ARE,United Arab Emirates,asare
+Dushanbe,TJ,TJK,Tajikistan,astjk
+Gaza,PS,,,
+Harbin,CN,CHN,China,aschn
+Hebron,PS,,,
+Ho Chi Minh,VN,VNM,Viet Nam,asvnm
+Hong Kong,HK,HKG,Hong Kong,ashkg
+Hovd,MN,MNG,Mongolia,asmng
+Irkutsk,RU,RUS,Russian Federation,asrus
+Istanbul,TR,TUR,Turkey,astur
+Jakarta,ID,IDN,Indonesia,asidn
+Jayapura,ID,IDN,Indonesia,asidn
+Jerusalem,IL,ISR,Israel,asisr
+Kabul,AF,AFG,Afghanistan,asafg
+Kamchatka,RU,RUS,Russian Federation,asrus
+Karachi,PK,PAK,Pakistan,aspak
+Kashgar,CN,CHN,China,aschn
+Kathmandu,NP,NPL,Nepal,asnpl
+Katmandu,NP,NPL,Nepal,asnpl
+Khandyga,RU,RUS,Russian Federation,asrus
+Kolkata,IN,IND,India,asind
+Krasnoyarsk,RU,RUS,Russian Federation,asrus
+Kuala Lumpur,MY,MYS,Malaysia,asmys
+Kuching,MY,MYS,Malaysia,asmys
+Kuwait,KW,KWT,Kuwait,askwt
+Macao,MO,MAC,Macau,asmac
+Macau,MO,MAC,Macau,asmac
+Magadan,RU,RUS,Russian Federation,asrus
+Makassar,ID,IDN,Indonesia,asidn
+Manila,PH,PHL,Philippines,asphl
+Muscat,OM,OMN,Oman,asomn
+Nicosia,CY,CYP,Cyprus,ascyp
+Novokuznetsk,RU,RUS,Russian Federation,asrus
+Novosibirsk,RU,RUS,Russian Federation,asrus
+Omsk,RU,RUS,Russian Federation,asrus
+Oral,KZ,KAZ,Kazakhstan,askaz
+Phnom Penh,KH,KHM,Cambodia,askhm
+Pontianak,ID,IDN,Indonesia,asidn
+Pyongyang,KP,,,
+Qatar,QA,QAT,Qatar,asqat
+Qyzylorda,KZ,KAZ,Kazakhstan,askaz
+Rangoon,MM,MMR,Myanmar,asmmr
+Riyadh,SA,SAU,Saudi Arabia,assau
+Saigon,VN,VNM,Viet Nam,asvnm
+Sakhalin,RU,RUS,Russian Federation,asrus
+Samarkand,UZ,UZB,Uzbekistan,asuzb
+Seoul,KR,,,
+Shanghai,CN,CHN,China,aschn
+Singapore,SG,SGP,Singapore,assgp
+Taipei,TW,,,
+Tashkent,UZ,UZB,Uzbekistan,asuzb
+Tbilisi,GE,GEO,Georgia,asgeo
+Tehran,IR,IRN,Iran (Islamic Republic Of),asirn
+Tel Aviv,IL,ISR,Israel,asisr
+Thimbu,BT,BTN,Bhutan,asbtn
+Thimphu,BT,BTN,Bhutan,asbtn
+Tokyo,JP,JPN,Japan,asjpn
+Ujung Pandang,ID,IDN,Indonesia,asidn
+Ulaanbaatar,MN,MNG,Mongolia,asmng
+Ulan Bator,MN,MNG,Mongolia,asmng
+Urumqi,CN,CHN,China,aschn
+Ust-Nera,RU,RUS,Russian Federation,asrus
+Vientiane,LA,LAO,Lao People'S Democratic Republic,aslao
+Vladivostok,RU,RUS,Russian Federation,asrus
+Yakutsk,RU,RUS,Russian Federation,asrus
+Yekaterinburg,RU,RUS,Russian Federation,asrus
+Yerevan,AM,ARM,Armenia,asarm
+Azores,PT,PRT,Portugal,euprt
+Bermuda,BM,BMU,Bermuda,nabmu
+Canary,ES,ESP,Spain,euesp
+Cape Verde,CV,CPV,Cape Verde,afcpv
+Faeroe,FO,FRO,Faroe Islands,eufro
+Faroe,FO,FRO,Faroe Islands,eufro
+Jan Mayen,NO,NOR,Norway,eunor
+Madeira,PT,PRT,Portugal,euprt
+Reykjavik,IS,ISL,Iceland,euisl
+South Georgia,GS,SGS,South Georgia And The South Sandwich Islands,ansgs
+St Helena,SH,SHN,St. Helena,afshn
+Stanley,FK,FLK,Falkland Islands (Malvinas),saflk
+ACT,AU,AUS,Australia,ocaus
+Adelaide,AU,AUS,Australia,ocaus
+Brisbane,AU,AUS,Australia,ocaus
+Broken Hill,AU,AUS,Australia,ocaus
+Canberra,AU,AUS,Australia,ocaus
+Currie,AU,AUS,Australia,ocaus
+Darwin,AU,AUS,Australia,ocaus
+Eucla,AU,AUS,Australia,ocaus
+Hobart,AU,AUS,Australia,ocaus
+LHI,AU,AUS,Australia,ocaus
+Lindeman,AU,AUS,Australia,ocaus
+Lord Howe,AU,AUS,Australia,ocaus
+Melbourne,AU,AUS,Australia,ocaus
+North,AU,AUS,Australia,ocaus
+NSW,AU,AUS,Australia,ocaus
+Perth,AU,AUS,Australia,ocaus
+Queensland,AU,AUS,Australia,ocaus
+South,AU,AUS,Australia,ocaus
+Sydney,AU,AUS,Australia,ocaus
+Tasmania,AU,AUS,Australia,ocaus
+Victoria,AU,AUS,Australia,ocaus
+West,AU,AUS,Australia,ocaus
+Yancowinna,AU,AUS,Australia,ocaus
+Acre,BR,BRA,Brazil,sabra
+DeNoronha,BR,BRA,Brazil,sabra
+East,BR,BRA,Brazil,sabra
+West,BR,BRA,Brazil,sabra
+Atlantic,CA,CAN,Canada,nacan
+Central,CA,CAN,Canada,nacan
+Eastern,CA,CAN,Canada,nacan
+East-Saskatchewan,CA,CAN,Canada,nacan
+Mountain,CA,CAN,Canada,nacan
+Newfoundland,CA,CAN,Canada,nacan
+Pacific,CA,CAN,Canada,nacan
+Saskatchewan,CA,CAN,Canada,nacan
+Yukon,CA,CAN,Canada,nacan
+Continental,CL,CHL,Chile,sachl
+EasterIsland,CL,CHL,Chile,sachl
+Cuba,CU,CUB,Cuba,nacub
+Egypt,EG,EGY,Egypt,afegy
+Eire,IE,IRL,Ireland,euirl
+Amsterdam,NL,NLD,Netherlands,eunld
+Andorra,AD,AND,Andorra,euand
+Athens,GR,GRC,Greece,eugrc
+Belfast,GB,GBR,United Kingdom,eugbr
+Belgrade,RS,,,
+Berlin,DE,DEU,Germany,eudeu
+Bratislava,SK,SVK,Slovakia (Slovak Republic),eusvk
+Brussels,BE,BEL,Belgium,eubel
+Bucharest,RO,ROM,Romania,
+Budapest,HU,HUN,Hungary,euhun
+Busingen,DE,DEU,Germany,eudeu
+Chisinau,MD,,,
+Copenhagen,DK,DNK,Denmark,eudnk
+Dublin,IE,IRL,Ireland,euirl
+Gibraltar,GI,GIB,Gibraltar,eugib
+Guernsey,GG,,,
+Helsinki,FI,FIN,Finland,eufin
+Isle of Man,IM,,,
+Istanbul,TR,TUR,Turkey,astur
+Jersey,JE,,,
+Kaliningrad,RU,RUS,Russian Federation,asrus
+Kiev,UA,UKR,Ukraine,euukr
+Lisbon,PT,PRT,Portugal,euprt
+Ljubljana,SI,SVN,Slovenia,eusvn
+London,GB,GBR,United Kingdom,eugbr
+Luxembourg,LU,LUX,Luxembourg,eulux
+Madrid,ES,ESP,Spain,euesp
+Malta,MT,MLT,Malta,eumlt
+Mariehamn,AX,,,
+Minsk,BY,BLR,Belarus,eublr
+Monaco,MC,MCO,Monaco,eumco
+Moscow,RU,RUS,Russian Federation,asrus
+Nicosia,CY,CYP,Cyprus,ascyp
+Oslo,NO,NOR,Norway,eunor
+Paris,FR,FRA,France,eufra
+Podgorica,ME,,,
+Prague,CZ,CZE,Czech Republic,eucze
+Riga,LV,LVA,Latvia,eulva
+Rome,IT,ITA,Italy,euita
+Samara,RU,RUS,Russian Federation,asrus
+San Marino,SM,SMR,San Marino,eusmr
+Sarajevo,BA,BIH,Bosnia And Herzegowina,eubih
+Simferopol,RU,RUS,Russian Federation,asrus
+Skopje,MK,,,
+Sofia,BG,BGR,Bulgaria,eubgr
+Stockholm,SE,SWE,Sweden,euswe
+Tallinn,EE,,,
+Tirane,AL,ALB,Albania,eualb
+Tiraspol,MD,,,
+Uzhgorod,UA,UKR,Ukraine,euukr
+Vaduz,LI,LIE,Liechtenstein,eulie
+Vatican,VA,VAT,Holy See (Vatican City State),
+Vienna,AT,AUT,Austria,euaut
+Vilnius,LT,LTU,Lithuania,eultu
+Volgograd,RU,RUS,Russian Federation,asrus
+Warsaw,PL,POL,Poland,eupol
+Zagreb,HR,HRV,Croatia (Local Name: Hrvatska),euhrv
+Zaporozhye,UA,UKR,Ukraine,euukr
+Zurich,CH,CHE,Switzerland,euche
+Hongkong,HK,HKG,Hong Kong,ashkg
+Iceland,IS,ISL,Iceland,euisl
+Antananarivo,MG,MDG,Madagascar,afmdg
+Chagos,IO,IOT,British Indian Ocean Territory,asiot
+Christmas,CX,CXR,Christmas Island,ascxr
+Cocos,CC,CCK,Cocos (Keeling) Islands,ascck
+Comoro,KM,COM,Comoros,afcom
+Kerguelen,TF,ATF,French Southern Territories,anatf
+Mahe,SC,SYC,Seychelles,afsyc
+Maldives,MV,MDV,Maldives,asmdv
+Mauritius,MU,MUS,Mauritius,afmus
+Mayotte,YT,MYT,Mayotte,afmyt
+Reunion,RE,REU,Reunion,afreu
+Iran,IR,IRN,Iran (Islamic Republic Of),asirn
+Israel,IL,ISR,Israel,asisr
+Jamaica,JM,JAM,Jamaica,najam
+Japan,JP,JPN,Japan,asjpn
+Kwajalein,MH,MHL,Marshall Islands,ocmhl
+Libya,LY,LBY,Libyan Arab Jamahiriya,aflby
+BajaNorte,MX,MEX,Mexico,namex
+BajaSur,MX,MEX,Mexico,namex
+General,MX,MEX,Mexico,namex
+Navajo,US,USA,United States,nausa
+Apia,WS,WSM,Samoa,ocwsm
+Auckland,NZ,NZL,New Zealand,ocnzl
+Chatham,NZ,NZL,New Zealand,ocnzl
+Chuuk,FM,,,
+Easter,CL,CHL,Chile,sachl
+Efate,VU,VUT,Vanuatu,ocvut
+Enderbury,KI,KIR,Kiribati,ockir
+Fakaofo,TK,TKL,Tokelau,octkl
+Fiji,FJ,FJI,Fiji,ocfji
+Funafuti,TV,TUV,Tuvalu,octuv
+Galapagos,EC,ECU,Ecuador,saecu
+Gambier,PF,PYF,French Polynesia,ocpyf
+Guadalcanal,SB,SLB,Solomon Islands,ocslb
+Guam,GU,GUM,Guam,ocgum
+Honolulu,US,USA,United States,nausa
+Johnston,UM,UMI,United States Minor Outlying Islands,naumi
+Kiritimati,KI,KIR,Kiribati,ockir
+Kosrae,FM,,,
+Kwajalein,MH,MHL,Marshall Islands,ocmhl
+Majuro,MH,MHL,Marshall Islands,ocmhl
+Marquesas,PF,PYF,French Polynesia,ocpyf
+Midway,UM,UMI,United States Minor Outlying Islands,naumi
+Nauru,NR,NRU,Nauru,ocnru
+Niue,NU,NIU,Niue,ocniu
+Norfolk,NF,NFK,Norfolk Island,ocnfk
+Noumea,NC,NCL,New Caledonia,ocncl
+Pago Pago,AS,ASM,American Samoa,ocasm
+Palau,PW,PLW,Palau,ocplw
+Pitcairn,PN,PCN,Pitcairn,ocpcn
+Pohnpei,FM,,,
+Ponape,FM,,,
+Port Moresby,PG,PNG,Papua New Guinea,ocpng
+Rarotonga,CK,COK,Cook Islands,occok
+Saipan,MP,MNP,Northern Mariana Islands,ocmnp
+Samoa,AS,ASM,American Samoa,ocasm
+Tahiti,PF,PYF,French Polynesia,ocpyf
+Tarawa,KI,KIR,Kiribati,ockir
+Tongatapu,TO,TON,Tonga,octon
+Truk,FM,,,
+Wake,UM,UMI,United States Minor Outlying Islands,naumi
+Wallis,WF,WLF,Wallis And Futuna Islands,ocwlf
+Yap,FM,,,
+Poland,PL,POL,Poland,eupol
+Portugal,PT,PRT,Portugal,euprt
+PRC,CN,CHN,China,aschn
+ROC,TW,,,
+ROK,KR,,,
+Singapore,SG,SGP,Singapore,assgp
+Turkey,TR,TUR,Turkey,astur
+Alaska,US,USA,United States,nausa
+Aleutian,US,USA,United States,nausa
+Arizona,US,USA,United States,nausa
+Central Time (US & Canada),US,USA,United States,nausa
+Eastern Time (US & Canada),US,USA,United States,nausa
+Mid-Atlantic Time (US & Canada),US,USA,United States,nausa
+Atlantic Time (Canada),CA,CAN,Canada,nacan
+East-Indiana,US,USA,United States,nausa
+Hawaii,US,USA,United States,nausa
+Indiana-Starke,US,USA,United States,nausa
+Michigan,US,USA,United States,nausa
+Mountain Time (US & Canada),US,USA,United States,nausa
+Pacific Time (US & Canada),US,USA,United States,nausa
+Samoa,US,USA,United States,nausa
+W-SU,RU,RUS,Russian Federation,asrus

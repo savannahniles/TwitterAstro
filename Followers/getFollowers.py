@@ -113,7 +113,26 @@ def throttle(type):
     print "sleeping for %s sec" % (rate)
     time.sleep(rate) #throttle
 
+
 accountName = "AstroSamantha"
+
+# @Astro_Alex
+# @AstroSamantha
+# @esa
+# @Thom_astro
+# @astro_timpeake
+
+# @Astro_Mike
+# @Cmdr_Hadfield
+# @NASA
+
+# @astrp_luca
+# @astro_andre
+# @Astro_Andreas
+# @astro_Jfrancois
+# @astro_paolo
+# @CFuglesang
+
 # # next_cursor = -1
 # next_cursor = 1476000366015652434
 # data = t.followers.ids(screen_name=accountName, next_cursor=next_cursor)
@@ -157,9 +176,9 @@ print "  "
 no_repeats = list(set(followers))
 print "With repeats removed: " + str(len(no_repeats))
 
-NO_REPEATS_FILE = "noRepeats_followers.json"
-f = io.open(NO_REPEATS_FILE, 'w', encoding='utf8')
-f.write(unicode(json.dumps(no_repeats)))
+# NO_REPEATS_FILE = "noRepeats_followers.json"
+# f = io.open(NO_REPEATS_FILE, 'w', encoding='utf8')
+# f.write(unicode(json.dumps(no_repeats)))
 
 
 
