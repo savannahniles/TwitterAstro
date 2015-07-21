@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<style>
+
+.link {
+  fill: none;
+  stroke: #666;
+  /*stroke-width: 0px;*/
+}
+
+.node circle {
+  fill: #ccc;
+  stroke: #fff;
+  stroke-width: 1.5px;
+}
+
+/*body {
+  color: white;
+  text-shadow: 0px 0px 10px black;
+}
+*/
+text {
+  font: 15px sans-serif;
+  pointer-events: none;
+  text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
+}
+
+#lol{
+  stroke:#ff0000;
+}
+
+</style>
+<body>
+<!-- <script src="http://d3js.org/d3.v3.min.js"></script> -->
+<script src="d3.js"></script>
+<script>
+
+var allNames = ['astro_Jfrancois', 'astro_timpeake', 'Thom_astro', 'Astro_Alex', 'AstroSamantha', 'astro_luca', 'astro_andre', 'astro_paolo', 'Astro_Andreas', 'CFuglesang', 'ESA_EAC', 'esa', 'esaoperations', 'Astro_Satoshi', 'Astro_Wakata', 'Astro_Soichi', 'Astro_Kimiya', 'JAXA_en', 'Aki_Hoshide', 'csa_asc', 'asc_csa', 'Astro_Jeremy', 'Astro_DavidS', 'AstroDaveMD', 'Cmdr_Hadfield', 'RobertaBondar', 'RobertThirsk', 'AstroGarneau', 'fka_roscosmos', 'spacetihon', 'OlegMKS', 'Msuraev', 'AntonAstrey', 'NASA', 'NASA_Astronauts', 'NASAPeople', 'AstroClass2013', 'SciAstro', 'Astro_Flow', 'Astro_Cady', 'Astro_Ferg', 'AstroCoastie', 'astro_Pettit', 'AstroDot', 'Astro_Wheels', 'Astro_Doug', 'Astro_Taz', 'Astro_Box', 'Astro2fish', 'Astro_Jeff', 'AstroAcaba', 'AstroKarenN', 'Astro_Kate7', 'astro_kjell', 'Astro_127', 'AstroIronMike', 'foreman_mike', 'astro_aggie', 'AstroIllini', 'Astro_Mike', 'Astro_Nicholas', 'Astro_Nicole', 'astro_reid', 'Astro_Rex', 'AstroRM', 'Astro_Ron', 'Astro_Sandy', 'AstroSerena', 'StationCDRKelly', 'Astro_Maker', 'Astro_Suni', 'AstroTerry', 'astro_tim', 'AstroMarshburn', 'Astro_TJ', 'Chief_Astronaut', 'Commercial_Crew', 'DESERT_RATS', 'HMP', 'ISS_Research', 'NASAMightyEagle', 'NASA_NEEMO', 'NASA_Orion', 'PavilionLake', 'MorpheusLander', 'AstroRobonaut', 'NASA_SLS', 'Astro_Clay']
+var allTweets = [3, 260, 225, 101, 1163, 671, 452, 42, 188, 91, 8, 2212, 1148, 89, 42, 94, 229, 56, 183, 1444, 691, 66, 132, 303, 522, 23, 19, 0, 127, 11, 159, 0, 101, 1872, 828, 279, 0, 87, 664, 480, 11, 0, 7, 84, 498, 0, 0, 16, 2, 0, 0, 34, 0, 24, 0, 14, 102, 107, 7, 132, 0, 119, 196, 3, 0, 617, 270, 0, 100, 19, 0, 533, 13, 0, 68, 99, 129, 3, 8, 1282, 0, 8, 362, 0, 23, 27, 404, 2784]
+
+var width = 1060, height = 800;
+var color = d3.scale.category20();
+var origSize = 0;
+
+function getSize(num){
+  if (num>2700) {
+    return 22
+  } else if (num>2400) {
+    return 20
+  } else if (num>2100) {
+    return 18
+  } else if (num>1800) {
+    return 16
+  } else if (num>1500) {
+    return 14
+  } else if (num>1200) {
+    return 12
+  } else if (num>900) {
+    return 10
+  } else if (num>600) {
+    return 8
+  } else if (num>300) {
+    return 6
+  } else {
+    return 4
+  } 
+}
+
+function linkThick(num){
+  if (num>100) {
+    return 2.5
+  } else if (num>75) {
+    return 2.0
+  } else if (num>50) {
+    return 1.5
+  } else if (num>25) {
+    return 1.0
+  } else {
+    return 0.5
+  }
+}
+
+d3.json("replies_retweets.json", function(error, graph) {
+  var links = graph.links
+  var nodes = graph.nodes
+
+  var force = d3.layout.force()
+      .nodes(d3.values(nodes))
+      .links(links)
+      .size([width, height])
+      .gravity(.05)
+      .charge(-240)
+      .linkDistance(220)
+      .on("tick", tick)
+      .start();
+
+  var svg = d3.select("body").append("svg")
+      .attr("width", width)
+      .attr("height", height);
+
+  var link = svg.selectAll(".link")
+      .data(force.links())
+      .enter().append("line")
+      .attr("class", "link")
+      .attr('stroke', 'gray')
+      .attr("stroke-width", function(d) { return linkThick(d.value); });
+
+  var node = svg.selectAll(".node")
+      .data(force.nodes())
+      .enter().append("g")
+      .attr("class", "node")
+      // .on("mouseover", mouseover)
+      // .on("mouseout", mouseout)
+      .call(force.drag)
+      .on("mouseover",fade(.1))
+      .on("mouseout",fade(1));
+
+  node.append("circle")
+      .attr("r", function(d){
+        var i = allNames.indexOf(d.name)
+        return getSize(allTweets[i])
+      })
+      .style("fill", function(d) { return color(d.group); })
+
+  node.append("text")
+      .attr("x", 12)
+      .attr("dy", ".35em")
+      .attr("opacity",0)
+      .text(function(d) { return d.name; });
+
+  var linkedByIndex = {};
+  graph.links.forEach(function(d) {
+    linkedByIndex[d.source.index + "," + d.target.index] = 1;
+  });
+
+  var numLinksByIndex = {};
+  graph.links.forEach(function(d) {
+    numLinksByIndex[d.source.index + "," + d.target.index] = d.value;
+    // console.log(d.value);
+  });
+  // console.log(numLinksByIndex);
+
+  function isConnected(a, b) {
+    // console.log("linking " + a + " and " + b + " gets " + linkedByIndex[a.index + "," + b.index] + " and " + linkedByIndex[b.index + "," + a.index])
+    return linkedByIndex[a.index + "," + b.index] || linkedByIndex[b.index + "," + a.index] || a.index == b.index;
+  }
+
+  function getLinkNum(a,b) {
+    if (isConnected(a,b)) {
+      // console.log("linking " + a + " and " + b + " gets " + numLinksByIndex[a.index + "," + b.index] + " and " + numLinksByIndex[b.index + "," + a.index])
+      var forward = numLinksByIndex[a.index + "," + b.index];
+      var backward = numLinksByIndex[b.index + "," + a.index];
+      var fout = (forward !== undefined) ? forward : 0;
+      var bout = (bout !== undefined) ? bout : 0;
+      return fout + bout;
+    } else {
+      return 1;
+    }
+  }
+
+  function fade(opacity) {
+    return function(d) {
+      node.style("stroke-opacity", function(o) {
+        thisOpacity = isConnected(d, o) ? 1 : opacity;
+        strWidth = getLinkNum(d,o);
+        this.setAttribute('fill-opacity', thisOpacity);
+        this.setAttribute('stroke-width', (strWidth+"px"));
+        return thisOpacity;
+      });
+
+      // node.select(".link").style("stroke-width", function(o) {
+      //   strWidth = getLinkNum(d,o);
+      //   this.setAttribute('stroke-width',strWidth+"px");
+      //   console.log(strWidth+"px");
+      //   return strWidth+"px";
+      // });
+
+      node.select("text").style("opacity", function(o) {
+        thisOpacity = ((opacity===.1)&&isConnected(d,o)) ? 1 : 0;
+        this.setAttribute('fill-opacity', thisOpacity);
+        return thisOpacity;
+      });
+
+      link.style("stroke-opacity", opacity).style("stroke-opacity", function(o) {
+        return o.source === d || o.target === d ? 1 : opacity;
+      });
+    };
+  }
+
+  function tick() {
+    link
+        .attr("x1", function(d) { return d.source.x; })
+        .attr("y1", function(d) { return d.source.y; })
+        .attr("x2", function(d) { return d.target.x; })
+        .attr("y2", function(d) { return d.target.y; });
+
+    node
+        .attr("transform", function(d) { return "translate(" + d.x + "," + d.y + ")"; });
+  }
+
+  function mouseover() {
+    console.log("mouseovering");
+    // d3.select(this).select("circle").transition()
+    //     .duration(750)
+    //     .attr("r", 24);
+    d3.select(this).select("text").transition()
+      .duration(350)
+      // .attr("z-index",-1)
+      .attr("opacity", 100);
+  }
+
+  function mouseout() {
+    console.log("mouseouting");
+    // d3.select(this).select("circle").transition()
+    //     .duration(750)
+    //     .attr("r", 8);
+    d3.select(this).select("text").transition()
+        .duration(350)
+        // .attr("z-index",1)
+        .attr("opacity", 0);
+  }
+
+});
+
+</script>

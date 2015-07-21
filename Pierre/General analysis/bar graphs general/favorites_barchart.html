@@ -1,0 +1,244 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+    <head>
+      <title>Favorites Bar Chart</title>
+      <meta charset="utf-8" />
+        <script src="../d3.min.js" type="text/javascript"></script>
+    </head>
+
+    <body>
+
+        <style>
+        .bar {
+          fill: steelblue;
+        }
+
+        .stderr {
+            stroke-width: 1.5;
+            stroke: black;
+        }
+
+        .toptick{
+            stroke-width: 1.5;
+            stroke: black;
+        }
+
+        .bottomtick{
+            stroke-width: 1.5;
+            stroke: black;
+        }
+
+
+        .bar:hover {
+          fill: brown;
+        }
+
+        .axis {
+          font: 10px sans-serif;
+        }
+
+        .axis path,
+        .axis line {
+          fill: none;
+          stroke: #000;
+          shape-rendering: crispEdges;
+        }
+
+        .x.axis path {
+          display: none;
+        }
+
+        text{
+            font-size:12px;
+            font-family: sans-serif;
+        }
+        
+        </style>
+<body>
+<script>
+
+var margin = {top: 20, right: 20, bottom: 30, left: 80},
+    width = 520 - margin.left - margin.right, //960
+    height = 290 - margin.top - margin.bottom; //500
+
+var x = d3.scale.ordinal()
+    .rangeRoundBands([0, width], .1);
+
+var y = d3.scale.linear()
+    .range([height, 0]);
+
+var xAxis = d3.svg.axis()
+    .scale(x)
+    .orient("bottom");
+
+var yAxis = d3.svg.axis()
+    .scale(y)
+    .orient("left")
+    .ticks(10);
+
+var svg = d3.select("body").append("svg")
+    .attr("width", width + margin.left + margin.right)
+    .attr("height", height + margin.top + margin.bottom)
+    .append("g")
+    .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+
+var accounts = [
+    {"group": "NASA", "name": "Morpheus Lander", "favorites": 3015}, 
+    {"group": "NASA", "name": "Leland Melvin", "favorites": 2373}, 
+    {"group": "NASA", "name": "ISS Research", "favorites": 1836},
+    {"group": "ESA", "name": "Sam Cristoforetti", "favorites": 5377}, 
+    {"group": "ESA", "name": "ESA", "favorites": 4565}, 
+    {"group": "ESA", "name": "Luca Parmitano", "favorites": 2014}, 
+    {"group": "ESA", "name": "ESA Operations", "favorites": 1867}, 
+    {"group": "CSA", "name": "Canadian Space Agency", "favorites": 4207},
+    {"group": "CSA", "name": "Chris Hadfield", "favorites": 1325}]
+
+var color = d3.scale.category20();
+
+d3.csv("favorites.csv", type, function(error, data) {
+    console.log(data);
+    x.domain(data.map(function(d) { return d.group; }));
+    y.domain([0, 4565]);
+
+    svg.append("g")
+        .attr("class", "x axis")
+        .attr("transform", "translate(0," + height + ")")
+        .call(xAxis);
+
+    svg.append("g")
+        .attr("class", "y axis")
+        .call(yAxis)
+        .append("text")
+        .attr("transform", "rotate(-90)")
+        .attr("y", 6)
+        .attr("dy", ".71em")
+        .style("text-anchor", "end")
+        .text("Number of Favorites");
+
+    svg.selectAll(".bar")
+        .data(data)
+        .enter().append("rect")
+        .style("fill", function(d) { return color(d.group); })
+        .attr("class", "bar")
+        .attr("x", function(d) { return x(d.group); })
+        .attr("width", x.rangeBand())
+        .attr("y", function(d) { return y(d.average); })
+        .attr("height", function(d) { return height - y(d.average); });
+
+    /* Define the data for the circles */
+    var elem = svg.selectAll(".elem")
+        .data(accounts)
+        .enter().append("g")
+        .on("mouseover", mouseover)
+        .on("mouseout", mouseout)
+        .attr("class","elem");
+
+    /*Create the circle for each block */
+    var circle = elem.append("circle")
+        .attr("r", 6)
+        .attr("cx",function(d,i){return x(d.group) + ((x.rangeBand())/2);})
+        .attr("cy", function(d) {return y(parseInt(d.favorites));})
+        .style("fill", "pink")
+        .style("stroke","white")
+        .style("stroke-width","1px");
+
+    /* Create the text for each block */
+    elem.append("text")
+      // .attr("dy", ".35em")
+      .attr("x",function(d,i){return x(d.group) + ((x.rangeBand())/2) + 13;})
+      .attr("y",function(d) {return y(parseInt(d.favorites)) + 4;})
+      // .attr("visibility","hidden")
+      .text(function(d) { return d.name; });
+
+    svg.selectAll(".stderr")
+        .data(data)
+        .enter().append("line")
+        .attr("class","stderr")
+        .attr("x1", function(d){
+            return x(d.group) + ((x.rangeBand())/2);
+        })
+        .attr("y1", function(d) { 
+            return y(parseInt(d.average)+parseInt(d.std)); 
+        })
+        .attr("x2", function(d){
+            return x(d.group) + ((x.rangeBand())/2);
+        })
+        .attr("y2", function(d) { return y(parseInt(d.average)-parseInt(d.std)); });
+        // .attr("stroke-width", 2)
+        // .attr("stroke", "black");
+
+    svg.selectAll(".toptick")
+        .data(data)
+        .enter().append("line")
+        .attr("class","toptick")
+        .attr("x1", function(d){
+            return x(d.group) + ((x.rangeBand())/2) - 5;
+        })
+        .attr("y1", function(d) { 
+            return y(parseInt(d.average)-parseInt(d.std)); 
+        })
+        .attr("x2", function(d){
+            return x(d.group) + ((x.rangeBand())/2) + 5;
+        })
+        .attr("y2", function(d) { 
+            return y(parseInt(d.average)-parseInt(d.std));
+        });
+
+    svg.selectAll(".bottomtick")
+        .data(data)
+        .enter().append("line")
+        .attr("class","bottomtick")
+        .attr("x1", function(d){
+            return x(d.group) + ((x.rangeBand())/2) - 5;
+        })
+        .attr("y1", function(d) { 
+            return y(parseInt(d.average)+parseInt(d.std)); 
+        })
+        .attr("x2", function(d){
+            return x(d.group) + ((x.rangeBand())/2) + 5;
+        })
+        .attr("y2", function(d) { 
+            return y(parseInt(d.average)+parseInt(d.std)); 
+        });
+
+});
+
+function type(d) {
+  d.average = +d.average;
+  d.std = +d.std;
+  // console.log("D IS " + d.average)
+  // console.log("D STD IS " + d.std)
+  return d;
+}
+
+function mouseover() {
+    // console.log("mouseovering");
+    d3.select(this).select("circle").transition()
+        .duration(350)
+        .attr("r", 10);
+    // d3.select(this).select("text")
+        // .transition()
+        // .duration(750)
+        // .attr("z-index",-1)
+        // .attr("opacity", 100)
+        // .attr("visibility","visible");
+}
+
+function mouseout() {
+    // console.log("mouseouting");
+    d3.select(this).select("circle").transition()
+        .duration(350)
+        .attr("r", 6);
+    // d3.select(this).select("text")
+        // .transition()
+        // .duration(750)
+        // .attr("z-index",-1)
+        // .attr("opacity", 100)
+        // .attr("visibility","hidden");
+}
+
+</script>
+
+    </body>
+    
+</html>

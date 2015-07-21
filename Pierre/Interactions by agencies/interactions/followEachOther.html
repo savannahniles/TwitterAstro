@@ -22,7 +22,7 @@ path.arc {
 .link {
   fill: none;
   stroke: #1f77b4;
-  stroke-opacity: .05;
+  stroke-opacity: .4;
   pointer-events: none;
 }
 
@@ -100,7 +100,7 @@ svg.append("svg:path")
     .attr("d", d3.svg.arc().outerRadius(ry - 120).innerRadius(0).startAngle(0).endAngle(2 * Math.PI))
     .on("mousedown", mousedown);
 
-d3.json("flareimports3.json", function(classes) {
+d3.json("flareImports3.json", function(classes) {
   var nodes = cluster.nodes(packages.root(classes)),
       links = packages.imports(nodes),
       splines = bundle(links);

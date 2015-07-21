@@ -1,0 +1,138 @@
+<meta charset="utf-8">
+<html>
+<head>
+<script src="http://d3js.org/d3.v3.min.js"></script>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+
+<!-- <link href="css/style.css" media="screen" rel="stylesheet" type="text/css" /> -->
+</head>
+<body>
+
+
+	<div id="graph">
+	</div>
+
+	<script src="data/CSA_hashtags.js"></script>
+	<script src="data/NASA_hashtags.js"></script>
+	<script src="data/ESA_hashtags.js"></script>
+	<script src="data/JAXA_hashtags.js"></script>
+	<script src="data/Roscosmos_hashtags.js"></script>
+
+
+<script type="text/javascript">
+
+  var getRandColor = function () {
+    colors = [
+      "rgb(224, 99, 99)",
+      "rgb(132, 48, 18)",
+      "rgb(175, 53, 0)",
+      "rgb(215, 75, 3)",
+      "rgb(179, 92, 30)",
+      "rgb(154, 68, 0)",
+      "rgb(201, 133, 58)",
+      "rgb(228, 186, 121)",
+      "rgb(245, 221, 158)",
+      "rgb(243, 210, 97)",
+      "rgb(196, 179, 70)",
+      "rgb(148, 177, 83)",
+      "rgb(37, 67, 34)",
+      "rgb(117, 158, 128)",
+      "rgb(79, 100, 86)",
+      "rgb(158, 211, 227)",
+      "rgb(123, 145, 211)",
+      "rgb(39, 54, 108)",
+      "rgb(198, 203, 247)",
+      "rgb(213, 157, 194)",
+      "rgb(229, 179, 187)"
+    ]
+    c = colors[Math.floor(Math.random() * colors.length)];
+    return c
+  }
+
+
+var width = screen.width,
+  height =screen.height/1.5,
+  articleFill = "black",
+  categoryFill = "black",
+  keywordFill = "gold",
+  circleStroke = "white",
+  linkColor = "gray",
+  textFill = "white",
+  textStroke = "black";
+
+var force=d3.layout.force()
+  .gravity(.1)
+  .charge(-100)
+  .linkDistance(function(d,i){
+    return 50;
+  })
+  .linkStrength(1)
+  .size([width, height]);
+
+var svg = d3.select("div#graph")
+  .append("svg")
+  .attr("width", width)
+  .attr("height", height);
+
+var nodes = NASA; ///////HERE*****************************
+nodes.sort(function(a,b) {
+  return parseInt(a.count,10) - parseInt(b.count,10);
+});
+console.log(nodes);
+
+// Create a hash that allows access to each node by its id
+var node_hash = [];
+var type_hash = [];
+var nodeSet = nodes;
+nodeSet.forEach(function(d, i) {
+  node_hash[d.id] = d;
+});
+
+force.nodes(nodeSet).start();
+    
+// Append the source object node and the target object node to each link records...
+var node =svg.selectAll(".node")
+  .data(nodes)
+  .enter().append("g")
+  .attr("class",function(d){
+    return "node";
+      })
+  .attr("id",function(d){ return d.id;});
+        
+node.append("circle")
+  .attr("class","circle")
+  .style("fill",function(d){
+      return getRandColor();
+  })
+  .style("stroke-width","1px")
+  .style("opacity", .75)
+  .style("stroke","black")
+  .attr("r",function(d,i){
+        return d.count/3; //DIVIDE BY A NUMBER HERE IF YOU NEED TO MAKE THE CIRCLES SMALLER 
+  });
+
+node.call(force.drag());
+
+node.append("text").attr("class","hovertext").text(function(d,i){
+  return "#" + d.word;  
+})
+  .style('font-size',"18px")
+  .style('font-weight',"200")
+  .style('fill','black')
+  .style("text-anchor", "middle");
+
+node.on('click',function(d){ 
+  //click on a node, do this
+});
+
+force.on("tick",tick);
+function tick() {
+   node.attr("transform", function(d) { return "translate(" + d.x + "," + d.y + ")"; });
+};
+      
+ 
+ </script>
+
+
+</body>
+</html>

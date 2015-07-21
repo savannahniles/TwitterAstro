@@ -1,0 +1,33 @@
+<!doctype html>
+<meta charset="utf-8">
+ 
+<!-- load D3js -->
+<script src="http://www.d3plus.org/js/d3.js"></script>
+ 
+<!-- load topojson library -->
+<script src="http://www.d3plus.org/js/topojson.js"></script>
+ 
+<!-- load D3plus after D3js -->
+<script src="http://www.d3plus.org/js/d3plus.js"></script>
+ 
+<!-- create container element for visualization -->
+<div id="viz"></div>
+ 
+<script>
+ 
+  // sample data array
+var sample_data = [{"country": "euukr", "name": "Ukraine", "value": 1}, {"country": "euisl", "name": "Iceland", "value": 1}, {"country": "ocpng", "name": "Papua New Guinea", "value": 5}, {"country": "ocasm", "name": "American Samoa", "value": 7}, {"country": "ocgum", "name": "Guam", "value": 11}, {"country": "asuzb", "name": "Uzbekistan", "value": 12}, {"country": "asmmr", "name": "Myanmar", "value": 26}, {"country": "eubih", "name": "Bosnia And Herzegowina", "value": 38}, {"country": "ocfji", "name": "Fiji", "value": 38}, {"country": "aflbr", "name": "Liberia", "value": 45}, {"country": "asomn", "name": "Oman", "value": 46}, {"country": "asgeo", "name": "Georgia", "value": 52}, {"country": "eultu", "name": "Lithuania", "value": 58}, {"country": "eulva", "name": "Latvia", "value": 64}, {"country": "eublr", "name": "Belarus", "value": 67}, {"country": "asarm", "name": "Armenia", "value": 67}, {"country": "asafg", "name": "Afghanistan", "value": 81}, {"country": "eusvk", "name": "Slovakia (Slovak Republic)", "value": 81}, {"country": "asaze", "name": "Azerbaijan", "value": 87}, {"country": "eubgr", "name": "Bulgaria", "value": 131}, {"country": "euhrv", "name": "Croatia (Local Name: Hrvatska)", "value": 132}, {"country": "aschn", "name": "China", "value": 143}, {"country": "askwt", "name": "Kuwait", "value": 151}, {"country": "afzwe", "name": "Zimbabwe", "value": 158}, {"country": "eucze", "name": "Czech Republic", "value": 209}, {"country": "euhun", "name": "Hungary", "value": 221}, {"country": "asnpl", "name": "Nepal", "value": 246}, {"country": "euaut", "name": "Austria", "value": 249}, {"country": "asisr", "name": "Israel", "value": 251}, {"country": "askaz", "name": "Kazakhstan", "value": 256}, {"country": "ocnzl", "name": "New Zealand", "value": 261}, {"country": "sabol", "name": "Bolivia", "value": 288}, {"country": "aspak", "name": "Pakistan", "value": 293}, {"country": "eupol", "name": "Poland", "value": 313}, {"country": "asbgd", "name": "Bangladesh", "value": 319}, {"country": "assau", "name": "Saudi Arabia", "value": 339}, {"country": "afken", "name": "Kenya", "value": 356}, {"country": "eudnk", "name": "Denmark", "value": 424}, {"country": "eufin", "name": "Finland", "value": 458}, {"country": "asirn", "name": "Iran (Islamic Republic Of)", "value": 499}, {"country": "eusvn", "name": "Slovenia", "value": 542}, {"country": "eubel", "name": "Belgium", "value": 588}, {"country": "saper", "name": "Peru", "value": 620}, {"country": "asind", "name": "India", "value": 628}, {"country": "euswe", "name": "Sweden", "value": 653}, {"country": "euprt", "name": "Portugal", "value": 698}, {"country": "asmys", "name": "Malaysia", "value": 699}, {"country": "assgp", "name": "Singapore", "value": 774}, {"country": "ashkg", "name": "Hong Kong", "value": 793}, {"country": "afegy", "name": "Egypt", "value": 822}, {"country": "sacol", "name": "Colombia", "value": 1281}, {"country": "asirq", "name": "Iraq", "value": 1366}, {"country": "euirl", "name": "Ireland", "value": 1393}, {"country": "asrus", "name": "Russia", "value": 1464}, {"country": "astha", "name": "Thailand", "value": 1467}, {"country": "astur", "name": "Turkey", "value": 1481}, {"country": "saarg", "name": "Argentina", "value": 1523}, {"country": "asidn", "name": "Indonesia", "value": 1639}, {"country": "eufra", "name": "France", "value": 1815}, {"country": "eudeu", "name": "Germany", "value": 1842}, {"country": "afmar", "name": "Morocco", "value": 1887}, {"country": "saven", "name": "Venezuela", "value": 1970}, {"country": "euesp", "name": "Spain", "value": 2263}, {"country": "euita", "name": "Italy", "value": 2429}, {"country": "sachl", "name": "Chile", "value": 2539}, {"country": "nagrl", "name": "Greenland", "value": 2626}, {"country": "namex", "name": "Mexico", "value": 3096}, {"country": "ocaus", "name": "Australia", "value": 3270}, {"country": "eugrc", "name": "Greece", "value": 3759}, {"country": "nacan", "name": "Canada", "value": 4399}, {"country": "eunld", "name": "Netherlands", "value": 5645}, {"country": "asjpn", "name": "Japan", "value": 5847}, {"country": "eugbr", "name": "United Kingdom", "value": 20046}, {"country": "nausa", "name": "United States", "value": 78721}]
+ 
+  // instantiate d3plus
+  var visualization = d3plus.viz()
+    .container("#viz")        // container DIV to hold the visualization
+    .data(sample_data)        // data to use with the visualization
+    .coords("https://gist.githubusercontent.com/davelandry/9042807/raw/countries.json") // pass topojson coordinates
+    .type("geo_map")          // visualization type
+    .id("country")            // key for which our data is unique on
+    .text("name")             // key to use for display text
+    .color("value")           // key for coloring countries
+    .tooltip("value")         // keys to place in tooltip
+    .draw()                   // finally, draw the visualization!
+ 
+</script>

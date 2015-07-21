@@ -12,16 +12,16 @@ path.arc {
 }
 
 .node {
-  font-size: 10px;
+  font-size: 15px;
 }
 
 .node:hover {
-  fill: #1f77b4;
+  fill: #606060;
 }
 
 .link {
   fill: none;
-  stroke: #1f77b4;
+  stroke: #bbb;
   stroke-opacity: .05;
   pointer-events: none;
 }
@@ -32,26 +32,26 @@ path.arc {
 }
 
 .node.target {
-  fill: #d62728 !important;
+  fill: #aaa !important;
 }
 
 .link.source {
-  stroke: #d62728;
+  stroke: #aaa;
 }
 
 .node.source {
-  fill: #2ca02c;
+  fill: #000;
 }
 
 .link.target {
-  stroke: #2ca02c;
+  stroke: #000;
 }
 
     </style>
   </head>
   <body>
     <h2>
-      Followings
+      Replies and Retweets
     </h2>
     <div style="position:absolute;bottom:0;font-size:18px;">tension: <input style="position:relative;top:3px;" type="range" min="0" max="100" value="85"></div>
     <script type="text/javascript" src="http://mbostock.github.io/d3/talk/20111116/d3/d3.js"></script>
@@ -76,7 +76,7 @@ var bundle = d3.layout.bundle();
 
 var line = d3.svg.line.radial()
     .interpolate("bundle")
-    .tension(.75)
+    .tension(.85)
     .radius(function(d) { return d.y; })
     .angle(function(d) { return d.x / 180 * Math.PI; });
 
@@ -100,7 +100,7 @@ svg.append("svg:path")
     .attr("d", d3.svg.arc().outerRadius(ry - 120).innerRadius(0).startAngle(0).endAngle(2 * Math.PI))
     .on("mousedown", mousedown);
 
-d3.json("flareimports3.json", function(classes) {
+d3.json("flareimports2.json", function(classes) {
   var nodes = cluster.nodes(packages.root(classes)),
       links = packages.imports(nodes),
       splines = bundle(links);

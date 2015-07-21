@@ -1,0 +1,33 @@
+<!doctype html>
+<meta charset="utf-8">
+ 
+<!-- load D3js -->
+<script src="http://www.d3plus.org/js/d3.js"></script>
+ 
+<!-- load topojson library -->
+<script src="http://www.d3plus.org/js/topojson.js"></script>
+ 
+<!-- load D3plus after D3js -->
+<script src="http://www.d3plus.org/js/d3plus.js"></script>
+ 
+<!-- create container element for visualization -->
+<div id="viz"></div>
+ 
+<script>
+ 
+  // sample data array
+var sample_data = [{"country": "euhun", "name": "Hungary", "value": 1}, {"country": "saarg", "name": "Argentina", "value": 1}, {"country": "eusvn", "name": "Slovenia", "value": 1}, {"country": "asisr", "name": "Israel", "value": 1}, {"country": "afken", "name": "Kenya", "value": 1}, {"country": "eucze", "name": "Czech Republic", "value": 1}, {"country": "afmar", "name": "Morocco", "value": 1}, {"country": "euaut", "name": "Austria", "value": 1}, {"country": "asirn", "name": "Iran (Islamic Republic Of)", "value": 1}, {"country": "saper", "name": "Peru", "value": 1}, {"country": "eufra", "name": "France", "value": 1}, {"country": "euesp", "name": "Spain", "value": 1}, {"country": "namex", "name": "Mexico", "value": 2}, {"country": "ashkg", "name": "Hong Kong", "value": 2}, {"country": "afegy", "name": "Egypt", "value": 2}, {"country": "ocaus", "name": "Australia", "value": 3}, {"country": "sachl", "name": "Chile", "value": 3}, {"country": "euita", "name": "Italy", "value": 3}, {"country": "eugrc", "name": "Greece", "value": 4}, {"country": "eunld", "name": "Netherlands", "value": 4}, {"country": "eugbr", "name": "United Kingdom", "value": 10}, {"country": "nacan", "name": "Canada", "value": 71}, {"country": "nausa", "name": "United States", "value": 414}]
+ 
+  // instantiate d3plus
+  var visualization = d3plus.viz()
+    .container("#viz")        // container DIV to hold the visualization
+    .data(sample_data)        // data to use with the visualization
+    .coords("https://gist.githubusercontent.com/davelandry/9042807/raw/countries.json") // pass topojson coordinates
+    .type("geo_map")          // visualization type
+    .id("country")            // key for which our data is unique on
+    .text("name")             // key to use for display text
+    .color("value")           // key for coloring countries
+    .tooltip("value")         // keys to place in tooltip
+    .draw()                   // finally, draw the visualization!
+ 
+</script>
